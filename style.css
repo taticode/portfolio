@@ -1,0 +1,254 @@
+/* RESET SUPER-SIMPLE.NET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* MY RESET---------------- * * * */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  transition: all 300ms;
+  position: relative;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*BREAKPOINTS---------------- * * * */
+/* MIS BREAKPOINTS
+mobile-small  >>>>> up to 576 px
+mobile-medium  >>> up to 768 px
+tablet  >>>>>>>>>> up to 992 px
+desktop  >>>>>>>> up to 1200 px
+widescreen >>>>>> up to 1216 px
+fullhd >>>>>>>>>> up to 1400 px */
+/*COLORS---------------- * * * */
+/*GLOBAL FONTS---------------- * * * */
+/*GLOBAL VARIABLES & MIXINS---------------- * * * */
+* {
+  font-family: "Comfortaa", "sans-serif";
+  line-height: 1.5;
+}
+
+body {
+  background-color: #FFFDF8;
+  color: #3F676D;
+}
+
+/*HEADER---------------- * * * */
+header {
+  box-shadow: -10px 10px 24px rgba(38, 43, 73, 0.2);
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  background-color: #FFFDF8;
+}
+
+/*LOGO---------------- * * * */
+.navLogo:hover {
+  cursor: pointer;
+}
+
+.logoImg {
+  width: 60px;
+  height: 60px;
+}
+
+.logoText .logoText--title {
+  font-family: "Work Sans", "cursive";
+  color: #262B49;
+  font-size: 28px;
+  line-height: 1;
+}
+.logoText .logoText--subtitle {
+  font-family: "Comfortaa", "sans-serif";
+  color: #C84350;
+  font-size: 18px;
+}
+
+/*MAIN NAV---------------- * * * */
+.navbar {
+  background-color: #FFFDF8;
+}
+
+.navbar-item:after {
+  position: absolute;
+  bottom: 30px;
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #F3C59F;
+  border-radius: 2px;
+}
+.navbar-item:hover:after {
+  transition: all 300ms;
+  width: 90%;
+}
+
+.navbar-item a:hover > .navbar-item a::after {
+  width: 100%;
+}
+
+/* HEADINGS ---------------- * * * */
+.title, h1, .title.is-1 {
+  font-family: "Work Sans", "cursive";
+  color: #262B49;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.subtitle, h2, .content h2, .subtitle.is-2 {
+  font-family: "Comfortaa", "sans-serif";
+  color: #262B49;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+h3, .title.is-3 {
+  font-family: "Work Sans", "cursive";
+  color: #262B49;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h4, .title.is-4 {
+  font-family: "Comfortaa", "sans-serif";
+  color: #262B49;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: #262B49;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+a:hover {
+  color: #3F676D;
+  opacity: 1;
+}
+
+/*CARDS---------------- * * * */
+.card {
+  background-color: #6EB3BD;
+}
+
+/*BLOCKS, WRAPS & CONTAINERS ---------------- * * * */
+/*MAIN---------------- * * * */
+main {
+  margin-top: 0px;
+}
+
+/*HERO INTRODUCTION---------------- * * * */
+.principal {
+  height: 105vh;
+  background-color: #FFFDF8;
+}
+
+/*PROJECTS---------------- * * * */
+/*PAINT BUCKET---------------- * * * */
+/* .bucket{
+
+    background-color: #ACD2E6;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    flex-wrap: wrap;
+    top: 100px;
+    transition: opacity 1000ms ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+} */
+/*SCROLL APPEAR---------------- * * * */
+.appear {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

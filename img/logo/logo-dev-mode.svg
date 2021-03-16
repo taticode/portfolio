@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="202px" height="180px" viewBox="0 0 202 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-dev-mode</title>
+    <desc>Created with Sketch.</desc>
+    <g id="logo-dev-mode" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="log-dev-mode">
+            <rect id="bg-deep" fill="#262B49" x="0" y="0" width="124" height="180" rx="15"></rect>
+            <rect id="bg-cyan" fill="#6EB3BD" x="74" y="0" width="128" height="180" rx="15"></rect>
+            <g id="curves-cyan" transform="translate(29.000000, 0.000000)" fill="#6EB3BD">
+                <rect id="Rectangle-Copy-3" x="23" y="0" width="53" height="20" rx="10"></rect>
+                <rect id="Rectangle-Copy-4" transform="translate(56.000000, 90.000000) rotate(-360.000000) translate(-56.000000, -90.000000) " x="32" y="80" width="48" height="20" rx="10"></rect>
+                <rect id="Rectangle-Copy-5" x="19" y="120" width="43" height="20" rx="10"></rect>
+                <rect id="Rectangle-Copy-6" x="35" y="160" width="46" height="20" rx="10"></rect>
+                <rect id="Rectangle-Copy-8" x="0" y="40" width="55" height="20" rx="10"></rect>
+            </g>
+            <g id="curves-deep" transform="translate(17.000000, 20.000000)" fill="#262B49">
+                <rect id="Rectangle-Copy-15" x="25" y="0" width="70" height="20" rx="10"></rect>
+                <rect id="Rectangle-Copy-16" x="0" y="40" width="70" height="20" rx="10"></rect>
+                <rect id="Rectangle-Copy-17" x="18" y="80" width="87" height="20" rx="10"></rect>
+                <rect id="Rectangle-Copy-18" x="21" y="120" width="60" height="20" rx="10"></rect>
+            </g>
+            <g id="pills-color" transform="translate(21.000000, 21.000000)">
+                <rect id="pill-deep" fill="#262B49" x="92" y="118" width="66" height="20" rx="10"></rect>
+                <rect id="circle-danger" fill="#C84350" x="0" y="99" width="20" height="20" rx="10"></rect>
+                <rect id="pill-peach" fill="#F3C59F" x="84" y="39" width="66" height="20" rx="10"></rect>
+                <rect id="pill-success" fill="#B8E986" x="121" y="79" width="35" height="20" rx="10"></rect>
+                <rect id="pill-danger" fill="#C84350" x="108" y="0" width="41" height="20" rx="10"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
