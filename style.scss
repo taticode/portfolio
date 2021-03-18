@@ -109,6 +109,23 @@ tablet  >>>>>>>>>> up to 992 px
 desktop  >>>>>>>> up to 1200 px
 widescreen >>>>>> up to 1216 px
 fullhd >>>>>>>>>> up to 1400 px */
+
+@mixin maxWidthDesktop {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@mixin maxWidthTablet {
+    max-width: 992px;
+    
+}
+@mixin maxWidthMobile {
+    max-width: 768;
+    
+}
+@mixin maxWidthSmallMobile {
+    max-width: 576;
+    
+}
 	
 
 
@@ -122,25 +139,27 @@ $deep:#262B49;
 $danger:#C84350;
 $success: #B8E986;
 
-$primary: $cream;
-$link: $deep;
-$info: $cyan;
-$warning: $peach;
-$dark: $deep;
-$text: $deep;
-
 $successShadow: #81A35E;   
 $peachShadow: #A4866D;
 $dangerShadow: #9C333D;
 
+$generalShadow: rgba(38,43,73,.2);
 
-$general-shadow: rgba(38,43,73,.2);
 
+.bg-lcyan{
+    background-color: $light-cyan;
+}
+.bg-peach{
+    background-color: $peach;
+}
+.bg-success{
+    background-color: $success;
+}
 
 /*GLOBAL FONTS---------------- * * * */
 
-$family-primary: 'Comfortaa', 'sans-serif';
-$family-secondary: 'Work Sans', 'cursive';
+$family-primary: 'Work Sans', 'cursive';
+$family-secondary: 'Comfortaa', 'sans-serif';
 
 
 
@@ -148,25 +167,171 @@ $family-secondary: 'Work Sans', 'cursive';
 
 
 *{
-    font-family: $family-primary;
+    font-family: $family-secondary;
     line-height: 1.5;
 
 }
 body{
-    background-color: #FFFDF8;
+    background-color: $cream;
     color: $cyan;
 }
 
-
-@mixin shadow {
-    box-shadow: -10px 10px 24px $general-shadow;
+.columns{
+    flex-wrap: wrap;
 }
 
+figure img{
+    height: 100%;
+    border-radius: 6px;
+    opacity: .9;
+
+}
+a figure img:hover{
+
+    opacity: 1;
+}
+
+$bradius: 2rem;
+$minPadding: 1rem;
+$padding2: 2rem;
+$padding3: 3rem;
+
+
+@mixin shadow {
+    box-shadow: -10px 10px 24px $generalShadow;
+}
+@mixin flex--between{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+@mixin flex--start{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+@mixin flex--end{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+@mixin flex--center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/* HEADINGS ---------------- * * * */
+h1{ 
+    font-family: $family-primary;
+    color: $deep;
+    font-weight: normal;
+    font-size: calc(1rem + 1.1vw);
+    line-height: 1.5;
+    padding-bottom: $minPadding;
+
+}
+h2{ 
+    font-family: $family-secondary;
+    color: $cyan;
+    font-size: calc(1rem + .3vw);
+    line-height: 1.5;
+    font-weight: bold;
+    padding-bottom: $minPadding;
+}
+h3{
+    font-family: $family-primary;
+    color: $peach;
+    font-size: calc(1rem + .3vw);
+    line-height: 1.5;
+    font-weight: lighter;
+    padding-bottom: $minPadding;
+}
+
+h4{
+    font-family: $family-secondary;
+    color: $deep;
+    font-size: calc(1rem + .3vw);
+    line-height: 1.5;
+    padding-bottom: $minPadding;
+}
+
+p{
+    line-height: 1.5;
+    padding-bottom: $minPadding;
+    font-size: 100%;
+}
+
+a{
+    color: $deep;
+    font-weight: bold;
+    opacity: .8;
+}
+a:hover{
+    color: $cyan;
+    opacity: 1;
+}
+
+/*BIG BLOCKS AND COMPONENTS---------------- * * * */
+main{
+    padding-top: $padding2;
+}
+section{
+    padding: $minPadding $padding2;
+    min-height: 90vh;
+    @include maxWidthDesktop();
+
+}
+.wrapCards{
+    @include flex--start();
+    align-items: flex-start;
+} 
+
+.card{
+
+
+    border-radius: $bradius;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 $minPadding $padding2 0;
+    @include shadow();
+    @include flex--start();
+
+    h2{
+        color: $deep;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+
+    .infoArticle{
+        margin-top: 0;
+        width: 70%;
+        padding: $padding2;
+
+    }
+} 
+
+nav{
+    @include maxWidthDesktop();
+    padding: 0 $padding2;
+}
 
 /*HEADER---------------- * * * */
 
 header {
     @include shadow();
+    padding: $minPadding $padding2;
     position: fixed;
     z-index: 50;
     width: 100%;
@@ -177,7 +342,8 @@ header {
 /*LOGO---------------- * * * */
 
 .navLogo{
-
+    @include flex--start();
+    width: 40%;
     &:hover{
         cursor: pointer;
     }
@@ -191,17 +357,21 @@ header {
 
 .logoText{
 
+padding-left: 1rem;
+padding-bottom: 0;
 
     .logoText--title{
-        font-family: $family-secondary;
+        font-family: $family-primary;
         color: $deep;
         font-size: 28px;
         line-height: 1;
+        padding-bottom: 0;
     }
     .logoText--subtitle{
-        font-family: $family-primary;
+        font-family: $family-secondary;
         color: $danger;
         font-size: 18px;
+        padding-bottom: .2rem;
     }
 }
 
@@ -212,15 +382,23 @@ header {
 
 .navbar{
     background-color: $cream;
+    @include flex--between();
+
 }
 
-.navbar-item{
+.navbarMenu{
+    width: 60%;
+    @include flex--end();
+}
 
+.navbar--item{
 
+    padding-left: $minPadding;
+    line-height: 2;
 
     &:after{
         position: absolute;
-        bottom: 30px;
+        bottom: 0px;
         content: "";
         display: block;
         width: 0%;
@@ -229,7 +407,7 @@ header {
         border-radius: 2px;
     }
     &:hover{
-        
+        cursor: pointer;
         &:after{
             transition: all 300ms;
             width: 90%;
@@ -238,104 +416,73 @@ header {
 }
 
 
-.navbar-item a:hover > .navbar-item a::after{
+.navbar--item a:hover > .navbar--item a::after{
     width: 100%;
 }
 
-
-/* HEADINGS ---------------- * * * */
-.title, h1, .title.is-1{
-    font-family: $family-secondary;
-    color: $deep;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 1.5;
+.tags{
+    @include flex--start();
 }
-.subtitle, h2, .content h2, .subtitle.is-2{
-    font-family: $family-primary;
-    color: $deep;
-    font-size: 22px;
-    line-height: 1.5;
-}
-h3, .title.is-3{
-    font-family: $family-secondary;
-    color: $deep;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.5;
-}
-
-h4, .title.is-4{
-    font-family: $family-primary;
-    color: $deep;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-p{
-    line-height: 1.5;
-}
-
-a{
-    color: $deep;
-    font-weight: bold;
-    opacity: .8;
-}
-a:hover{
-    color: $cyan;
-    opacity: 1;
-}
-
-/*CARDS---------------- * * * */
-.card{
+.tag{
+    padding: $minPadding;
+    border-radius: $bradius;
     background-color: $light-cyan;
+    padding: $minPadding;
+    margin-right: $minPadding;
 }
 
-/*BLOCKS, WRAPS & CONTAINERS ---------------- * * * */
-
-
-
-/*MAIN---------------- * * * */
-
-main{
-
-    margin-top: 0px;
-}
 
 
 /*HERO INTRODUCTION---------------- * * * */
 
 .principal{
 
-    height: 105vh;
+    height: 85vh;
     background-color: $cream;
 
 }
 
-/*PROJECTS---------------- * * * */
 
-.projects{
+
+/*STUDIES---------------- * * * */
+.card::after{
+    content: '';
+    //background-color: $light-cyan;
+    display: block;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
 
 
 }
+.bootcampUX::after{
 
+    background-image: url(./img/brands/ux-ui.png);
+}
+.jsAepi::after, .jsFictizia::after{
 
+    background-image: url(./img/brands/js.png);
+}
+.angularFictizia::after{
 
+    background-image: url(./img/brands/angular.png);
+}
+.masterFictizia::after, .cursoCice::after{
+    background-image: url(./img/brands/front.png);
+}
+.wordpressMadrid::after{
+    background-image: url(./img/brands/wp.png);
+}
 
-/*PAINT BUCKET---------------- * * * */
+/*FOOTER---------------- * * * */
 
-/* .bucket{
-
-    background-color: #ACD2E6;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    flex-wrap: wrap;
-    top: 100px;
-    transition: opacity 1000ms ease-in-out;
-    overflow: hidden;
-    opacity: 0;
-} */
+.footer{
+    background-color: $cream;
+}
 
 
 

@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
 
 
@@ -21,30 +20,30 @@
 <body>
 
     <header>
-        <nav class="navbar container pt-6 p-5">
-            <div class="navLogo is-flex is-justify-content-flex-start">
+        <nav class="navbar container">
+            <div class="navLogo">
                 <div class="logoImg">
                     <img src="./img/logo/logo.svg" alt="logo Tatiana García , frontend developer">
 
                 </div>
-                <div class="logoText pl-3">
+                <div class="logoText">
                     <h1 class="logoText--title">Tatiana García</h1>
-                    <h2 class="logoText--subtitle pl-1">Frontend developer</h2>
+                    <h2 class="logoText--subtitle">Frontend developer</h2>
                 </div>
 
             </div>
 
-            <ul class="navbar-menu navbar-end">
-                <li class="navbar-item"><a>Sobre mí</a></li>
-                <li class="navbar-item"><a>Proyectos</a></li>
-                <li class="navbar-item"><a>Formación</a></li>
-                <li class="navbar-item"><a>Contacto</a></li>
-                <li class="navbar-item">
+            <ul class="navbarMenu">
+                <li class="navbar--item"><a>Sobre mí</a></li>
+                <li class="navbar--item"><a>Proyectos</a></li>
+                <li class="navbar--item"><a>Formación</a></li>
+                <li class="navbar--item"><a>Contacto</a></li>
+                <li class="navbar--item">
                     <a href="https://www.linkedin.com/in/tatianagarciafrontend/" class="icon">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </li>
-                <li class="navbar-item">
+                <li class="navbar--item">
                     <a href="https://github.com/taticode" class="icon">
                         <i class="fab fa-github"></i>
                     </a>
@@ -55,30 +54,126 @@
 
     <main>
 
-        <section class="principal">
-            <div class="container columns is-max-desktop is flex is-justify-content-space-between">
+        <section class="hero">
 
-                <article class="column is-7">
-                    <h1 class="title is-1">Hola, soy Tatiana</h1>
-                    <p>Soy desarrolladora Frontend con un puntito de artista</br>
-                        Me dedico al diseño y desarrollo de interfaces gráficas con Javascript y Angular</br>
+            <article>
+                <h1>¡Hola!, soy Tatiana</h1>
+                <p>Soy desarrolladora Frontend con un puntito de artista</br>
+                    Me dedico al diseño y desarrollo de interfaces gráficas con Javascript y Angular
+                </p>
+                <p>
+                    Me interesa el mundo de la experiencia de usuario y cómo influye un diseño en la forma de usar
+                    una web o aplicación. Creo que el diseño es tan importante como el desarrollo en una app o web,
+                    ya que un buen diseño facilita la usabilidad, y al fin y al cabo creamos productos digitales
+                    para que los usen personas.
+                </p>
+                <p>
+                    Me gusta trabajar en lugares donde pueda aportar mi granito de arena dentro de un equipo y
+                    aprender nuevas tecnologías y si son proyectos con propósito, mucho mejor :)</p>
+                <p>Mi próximo objetivo es el desarrollo de aplicaciones con Android e iOS.</p>
 
-                        Me interesa el mundo de la experiencia de usuario y cómo influye un diseño en la forma de usar
-                        una web o aplicación. Creo que el diseño es tan importante como el desarrollo en una app o web,
-                        ya que un buen diseño facilita la usabilidad, y al fin y al cabo creamos productos digitales
-                        para que los usen personas.
-                        </br>
-                        Me gusta trabajar en lugares donde pueda aportar mi granito de arena dentro de un equipo y
-                        aprender nuevas tecnologías y si son proyectos con propósito, mucho mejor :)</br>
-                        Mi próximo objetivo es el desarrollo de aplicaciones con Android e iOS.</p>
+            </article>
+
+            <article>
+
+                <div class="bucket">
+
+
+                </div>
+
+            </article>
+            </div>
+
+
+        </section>
+
+        <section class="projects">
+
+            <h1>Proyectos</h1>
+
+        </section>
+
+        <section class="studies">
+
+            <h1>Formación</h1>
+            <div class="wrapCards">
+                <article class="card bootcampUX">
+                    <div class="infoArticle">
+                        <h2>Bootcamp online de UX-UI</h2>
+
+                        <h3>Cursado en Trazos</h3>
+                        <p>80 h - Finalizado en Marzo de 2021</p>
+                        <p>Curso intensivo que aporta una base sólida para el desarrollo de un producto
+                            digital
+                            desde la investigación previa a usuarios hasta el diseño final</p>
+
+                    </div>
 
                 </article>
 
-                <article class="column is-5 is-justify-content-space-between">
+                <article class="card jsAepi">
 
-                    <div class="bucket columns">
-                        <h1>Holiii :)</h1>
+                    <div class="infoArticle">
+                        <h2>Curso profesional de Javascript</h2>
+                        <h3>Cursado en Aepi</h3>
+                        <p>80 h - Finalizado en Marzo de 2021</p>
+                        <p>En este curso recibí formación en profundidad sobre Javascript Vanilla</p>
+                    </div>
 
+                </article>
+                <article class="card jsFictizia">
+
+                    <div class="infoArticle">
+                        <h2>Javascript para desarrolladores</h2>
+                        <h3>Cursado en Fictizia</h3>
+                        <p>45 h - Finalizado en Julio de 2019</p>
+                        <p>Curso de iniciación de Javascript profesional</p>
+                    </div>
+
+                </article>
+
+                <article class="card angularFictizia">
+
+                    <div class="infoArticle">
+                        <h2>Curso de Angular 7 </h2>
+                        <h3>Cursado en Fictizia</h3>
+                        <p>36 h - Finalizado en Enero de 2019</p>
+                        <p>En este curso aprendí las bases de Angular 7 y de la arquitectura de una app basada en
+                            componentes</p>
+                    </div>
+
+                </article>
+                <article class="card masterFictizia">
+
+                    <div class="infoArticle">
+                        <h2>Máster en diseño de interfaz y front-end con HTML5, CSS3 y JQUERY</h2>
+                        <h3>Cursado en Fictizia</h3>
+                        <p>150 h - Finalizado en Junio de 2018</p>
+                        <p>Máster muy enfocado a maquetación Front-end, aprendí a dominar el diseño responsive y
+                            nociones sólidas sobre diseño</p>
+                    </div>
+
+                </article>
+
+                <article class="card wordpressMadrid">
+
+                    <div class="infoArticle">
+                        <h2>Curso de Wordpress profesional</h2>
+                        <h3>Cursado en Cursos Wordpress Madrid</h3>
+                        <p>24 h - Finalizado en Junio de 2016</p>
+                        <p>Manejo de Wordpress y tema Divi</p>
+                    </div>
+
+                </article>
+
+                <article class="card cursoCice">
+
+                    <div class="infoArticle">
+                        <h2>Curso de HTML5, CSS3 y JQUERY</h2>
+
+                        <h3>Cursado en Cice</h3>
+                        <p>150 h - Finalizado en Abril de 2016</p>
+                        <p>Iniciación a la programación con HTML5, CSS3 y JQUERY</p>
                     </div>
 
                 </article>
@@ -87,133 +182,150 @@
 
         </section>
 
-        <section class="projects">
-            <div class="container is-max-desktop">
-                <h1 class="title is-1">Proyectos</h1>
-                <div class="columns is-desktop is-flex is-justify-content-space-between">
-                    <article class="card column is-4">
-                        <a href="https://taticode.github.io/masterFictizia/" target="_blank">
-                            <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <img src="./img/ganache.png"
-                                        alt="Imagen de cabecera del proyecto web para una cafetería">
-                                </figure>
-                            </div>
-                        </a>
-                        <div class="card-content">
-                            <h2 class="subtitle is-2">Cafetería Ganache</h2>
-                            <p class="content">
 
-                                Proyecto fin de máster Frontend en la escuela Fictizia, es una pequeña single page
-                                de
-                                una cafetería, principalmente enfocada al
-                                diseño responsive y sobretodo <strong>CSS</strong>
-                                y algo de
-                                <strong>javascript</strong>
-                            </p>
+        <section class="experience">
 
-                        </div>
-                    </article>
+            <h1>Experiencia</h1>
 
-                    <article class="card column is-4">
-                        <a href="https://taticode.github.io/masterFictizia/" target="_blank">
-                            <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <img src="" alt="Placeholder image">
-                                </figure>
-                            </div>
-                        </a>
-                        <div class="card-content">
-                            <h2 class="subtitle is-2">Pizza Rider</h2>
-                            <p class="content">
+            <article>
 
-                                Proyecto fin de máster Frontend en la escuela Fictizia, es una pequeña single page
-                                de
-                                una cafetería, principalmente enfocada al
-                                diseño responsive y sobretodo <strong>CSS</strong>
-                                y algo de
-                                <strong>javascript</strong>
-                            </p>
-
-                        </div>
-                    </article>
-
-                    <article class="card column is-4">
-                        <a href="https://taticode.github.io/masterFictizia/" target="_blank">
-                            <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <img src="" alt="Placeholder image">
-                                </figure>
-                            </div>
-                        </a>
-                        <div class="card-content">
-                            <h2 class="subtitle is-2">Pizza Rider</h2>
-                            <p class="content">
-
-                                Proyecto fin de máster Frontend en la escuela Fictizia, es una pequeña single page
-                                de
-                                una cafetería, principalmente enfocada al
-                                diseño responsive y sobretodo <strong>CSS</strong>
-                                y algo de
-                                <strong>javascript</strong>
-                            </p>
-
-                        </div>
-                    </article>
+                <h2>Frontend con Angular</h2>
+                <h3>Everis / Orange</h3>
+                <p> Desde Mayo 2020 - Enero 2021</p>
+                <p>Desarrollo, con Angular Js, de nuevas funcionalidades y resolución de incidencias para nueva
+                    aplicación de gestión de ventas en las tiendas de Orange. Trabajo en equipo con metodología agile
+                    (Jira) y control de versiones con Git Kraken.</p>
+                <div class="tags">
+                    <p class="tag">Angular</p>
+                    <p class="tag">Jira</p>
+                    <p class="tag">Git</p>
+                    <p class="tag">Gitkraken</p>
+                    <p class="tag">Javascript</p>
                 </div>
-            </div>
-        </section>
 
-        <section class="studies">
-            <div class="container is-max-desktop">
-                <h1 class="title is-1">Formación</h1>
-                <div class="is-desktop">
-                    <h2 class="column is-12">Bootcamp UX-UI - 2021 Trazos </h2>
+            </article>
 
-                    <h2 class="column is-12">CURSO PROFESIONAL JAVASCRIPT [ 2021 Aepi ]</h2>
+            <article>
 
-                    <h2 class="column is-12">JAVASCRIPT PARA DESARROLLADORES - [ 2019 Fictizia ]</h2>
-
-                    <h2 class="column is-12">CURSO DE ANGULAR 7 - [ 2018 Fictizia ] </h2>
-
-                    <h2 class="column is-12">MÁSTER EN DISEÑO DE INTERFAZ Y FRONT END CON HTML5, CSS3 Y JQUERY - [ 2018
-                        Fictizia ]</h2>
-
-                    <h2 class="column is-12">CURSO DE HTML5, CSS3 Y JQUERY- [ 2016 Cice, Escuela profesional de Nuevas
-                        Tecnologías ]</h2>
-
-                    <h2 class="column is-12">CURSO DE WORDPRESS - [ 2016 Cursos Wordpress Madrid ]</h2>
+                <h2>Frontend con Angular</h2>
+                <h3>Zeeker Solutions</h3>
+                <p> Noviembre 2019</p>
+                <p>Maquetación de la web corporativa con scss y desarrollo y maquetación de un producto nuevo junto al
+                    departamento UX .</p>
+                <div class="tags">
+                    <p class="tag">Angular</p>
+                    <p class="tag">Componentes</p>
+                    <p class="tag">SCSS</p>
+                    <p class="tag">Git</p>
+                    <p class="tag">Sourcetree</p>
+                    <p class="tag">Javascript</p>
+                    <p class="tag">NPM</p>
+                </div>
 
                 </div>
-            </div>
-        </section>
+            </article>
+            <article>
 
-
-        <section class="contact">
-            <div class="container is-max-desktop">
-                <h1 class="title is-1">Contacto</h1>
-                <div class="columns is-desktop is-flex is-justify-content-space-between">
-                    <h2>Escanea este código QR para descargar mi cv desde google drive</h2>
-                    <img class="column is-3" src="./img/qr-code.png" alt="">
+                <h2>Frontend con Angular & UI designer</h2>
+                <h3>EuropeSIP</h3>
+                <p> Abril 2019</p>
+                <p> Diseño y desarrollo de una interfaz gráfica para un call center, donde se
+                    pintaban en pantalla las llamadas entrantes, llamadas perdidas y en curso y los usuarios activos
+                    atendiendo
+                    llamadas.
+                    También una interfaz de uso interno de EuropeSIP para la gestión de sus productos y clientes, con el
+                    mismo
+                    procedimiento: Angular y scss.</p>
+                <div class="tags">
+                    <p class="tag">Angular</p>
+                    <p class="tag">Componentes</p>
+                    <p class="tag">Javascript</p>
+                    <p class="tag">SCSS</p>
+                    <p class="tag">BEM</p>
+                    <p class="tag">Git</p>
+                    <p class="tag">NPM</p>
                 </div>
-            </div>
+
+                </div>
+            </article>
+            <article>
+
+                <h2>Frontend & UI designer</h2>
+                <h3>Inserver</h3>
+                <p> Febrero 2019</p>
+                <p>Diseño y desarrollo de cursos online con Sketch y temas
+                    hijo de Moodle. Mi tarea era realizar diseños previos
+                    en Sketch de cursos online hechos con Moodle, una vez aprobado el diseño lo maquetaba
+                    con temas hijo en Moodle.</p>
+                <div class="tags">
+                    <p class="tag">Moodle</p>
+                    <p class="tag">SCSS</p>
+                    <p class="tag">BEM</p>
+
+                </div>
+
+                </div>
+            </article>
+
+
+            <article>
+
+                <h2>Frontend con Angular & UI designer</h2>
+                <h3>Sapos y Princesas</h3>
+                <p>Agosto 2017</p>
+                <p> Prácticas en empresa con una duración de 6 meses, mis tareas eran el diseño y desarrollo de landings
+                    de
+                    secciones nuevas, promociones y concursos de esta revista online en Wordpress, y la adaptación a
+                    diseño
+                    responsive de la propia web de Sapos y Princesas.</p>
+                <div class="tags">
+                    <p class="tag">Wordpress</p>
+                    <p class="tag">SCSS</p>
+                    <p class="tag">BEM</p>
+                    <p class="tag">Git</p>
+                    <p class="tag">Asana</p>
+                    <p class="tag">NPM</p>
+                </div>
+
+                </div>
+            </article>
+            <!-- 
+
+
+
+            - FRONTEND & UI DESIGNER - Sapos y Princesas (Prácticas) [ Ago 2017 ]
+            Prácticas en empresa con una duración de 6 meses, mis tareas eran el diseño y desarrollo de landings de
+            secciones nuevas, promociones y concursos de esta revista online en Wordpress, y la adaptación a diseño
+            responsive de la propia web de Sapos y Princesas.
+ -->
+
+
         </section>
+        <section class="contacto">
+            <h2>Escanea este código QR para descargar mi cv desde google drive</h2>
+            <img src="./img/qr-code.png" alt="código QR para descargar el cv en pdf de Tatiana">
+        </section>
+
+
+
+
+
     </main>
-    <footer>
+    <footer class="footer">
 
-        <nav class="navbar container pt-6 p-5">
+        <nav class="navbar container  is-max-desktop pt-6 p-5">
 
-            <ul class="navbar-menu navbar-end">
-                <li class="navbar-item"><a>Sobre mí</a></li>
-                <li class="navbar-item"><a>Proyectos</a></li>
-                <li class="navbar-item"><a>Formación</a></li>
-                <li class="navbar-item"><a>Contacto</a></li>
-                <li class="navbar-item">
+            <ul class="navbar-menu">
+                <li class="navbar--item"><a>Sobre mí</a></li>
+                <li class="navbar--item"><a>Proyectos</a></li>
+                <li class="navbar--item"><a>Formación</a></li>
+                <li class="navbar--item"><a>Contacto</a></li>
+                <li class="navbar--item">
                     <a href="https://www.linkedin.com/in/tatianagarciafrontend/" class="icon">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </li>
-                <li class="navbar-item">
+                <li class="navbar--item">
                     <a href="https://github.com/taticode" class="icon">
                         <i class="fab fa-github"></i>
                     </a>
