@@ -56,8 +56,8 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
+article {
+  margin-bottom: 2em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -131,13 +131,8 @@ body {
 }
 
 figure img {
-  height: 100%;
+  width: 100%;
   border-radius: 6px;
-  opacity: 0.9;
-}
-
-a figure img:hover {
-  opacity: 1;
 }
 
 /* HEADINGS ---------------- * * * */
@@ -189,20 +184,26 @@ a {
 }
 
 a:hover {
-  color: #3F676D;
+  color: #6EB3BD;
   opacity: 1;
 }
 
 /*BIG BLOCKS AND COMPONENTS---------------- * * * */
+.container {
+  margin: 0 auto;
+}
+
 main {
   padding-top: 2rem;
 }
 
 section {
   padding: 1rem 2rem;
-  min-height: 90vh;
   max-width: 1200px;
-  margin: 0 auto;
+}
+
+article {
+  margin-bottom: 3rem;
 }
 
 .wrapCards {
@@ -226,20 +227,20 @@ section {
   align-items: center;
   align-content: center;
 }
-.card h2 {
-  color: #262B49;
-  padding-bottom: 0;
-  margin: 0;
-}
 .card .infoArticle {
   margin-top: 0;
   width: 70%;
   padding: 2rem;
 }
+.card .infoArticle h2 {
+  color: #262B49;
+  padding-bottom: 0;
+  margin: 0;
+  padding: 0;
+}
 
 nav {
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -300,7 +301,6 @@ header {
 }
 
 .navbarMenu {
-  width: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -343,17 +343,26 @@ header {
 }
 
 .tag {
-  padding: 1rem;
+  min-width: 100px;
+  text-align: center;
+  color: #FFFDF8;
+  line-height: 0;
+  padding: 0 1rem;
   border-radius: 2rem;
   background-color: #6EB3BD;
   padding: 1rem;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 /*HERO INTRODUCTION---------------- * * * */
-.principal {
-  height: 85vh;
-  background-color: #FFFDF8;
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 /*STUDIES---------------- * * * */
@@ -389,9 +398,49 @@ header {
   background-image: url(./img/brands/wp.png);
 }
 
+/*EXPERIENCE---------------- * * * */
+.exp h2 {
+  padding-bottom: 0;
+}
+
+/*CONTACT---------------- * * * */
+.contact {
+  min-height: 50vh;
+}
+.contact .card {
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 2rem 1rem;
+}
+.contact .infoArticle {
+  padding: 0;
+}
+.contact img {
+  max-width: 150px;
+}
+
 /*FOOTER---------------- * * * */
 .footer {
-  background-color: #FFFDF8;
+  margin-top: 3rem;
+  background-color: #6EB3BD;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+.footer .navbar {
+  background-color: #6EB3BD;
+}
+.footer .navbar a {
+  color: #FFFDF8;
 }
 
 /*SCROLL APPEAR---------------- * * * */

@@ -58,8 +58,8 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
-	margin-top: 1em;
+article{
+	margin-bottom: 2em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -112,7 +112,7 @@ fullhd >>>>>>>>>> up to 1400 px */
 
 @mixin maxWidthDesktop {
     max-width: 1200px;
-    margin: 0 auto;
+
 }
 @mixin maxWidthTablet {
     max-width: 992px;
@@ -181,15 +181,11 @@ body{
 }
 
 figure img{
-    height: 100%;
+    width: 100%;
     border-radius: 6px;
-    opacity: .9;
 
 }
-a figure img:hover{
 
-    opacity: 1;
-}
 
 $bradius: 2rem;
 $minPadding: 1rem;
@@ -278,19 +274,27 @@ a{
     opacity: .8;
 }
 a:hover{
-    color: $cyan;
+    color: $light-cyan;
     opacity: 1;
 }
 
 /*BIG BLOCKS AND COMPONENTS---------------- * * * */
+
+.container{
+    margin: 0 auto;
+}
 main{
     padding-top: $padding2;
+
 }
 section{
+
     padding: $minPadding $padding2;
-    min-height: 90vh;
     @include maxWidthDesktop();
 
+}
+article{
+    margin-bottom: $padding3;
 }
 .wrapCards{
     @include flex--start();
@@ -307,18 +311,18 @@ section{
     @include shadow();
     @include flex--start();
 
-    h2{
-        color: $deep;
-        padding-bottom: 0;
-        margin: 0;
-    }
-
 
     .infoArticle{
         margin-top: 0;
         width: 70%;
         padding: $padding2;
 
+        h2{
+            color: $deep;
+            padding-bottom: 0;
+            margin: 0;
+            padding: 0;
+        }
     }
 } 
 
@@ -387,7 +391,7 @@ padding-bottom: 0;
 }
 
 .navbarMenu{
-    width: 60%;
+
     @include flex--end();
 }
 
@@ -424,21 +428,26 @@ padding-bottom: 0;
     @include flex--start();
 }
 .tag{
-    padding: $minPadding;
+    min-width: 100px;
+    text-align: center;
+    color: $cream;
+    line-height: 0;
+    padding: 0 $minPadding;
     border-radius: $bradius;
     background-color: $light-cyan;
     padding: $minPadding;
     margin-right: $minPadding;
+    margin-bottom: $minPadding;
 }
 
 
 
 /*HERO INTRODUCTION---------------- * * * */
 
-.principal{
+.hero{
 
-    height: 85vh;
-    background-color: $cream;
+    min-height: 85vh;
+    @include flex--center();
 
 }
 
@@ -478,10 +487,52 @@ padding-bottom: 0;
     background-image: url(./img/brands/wp.png);
 }
 
+
+/*EXPERIENCE---------------- * * * */
+
+.exp{
+
+
+    h2{
+        padding-bottom: 0;
+    }
+}
+
+/*CONTACT---------------- * * * */
+
+.contact{
+    min-height: 50vh;
+    .card{
+        margin: $padding3 auto;
+        width: 100%;
+        max-width: 40vw;
+        @include flex--center();
+        padding: $padding2 $minPadding;
+    }
+    .infoArticle{
+        padding: 0;
+    }
+
+    img{
+        max-width: 150px;
+    }
+}
+
 /*FOOTER---------------- * * * */
 
 .footer{
-    background-color: $cream;
+    margin-top: $padding3;
+    background-color: $light-cyan;
+    padding: $padding3;
+    @include flex--end();
+    .navbar{
+        background-color: $light-cyan;
+
+        a{
+            color: $cream;
+        }
+
+    }
 }
 
 
