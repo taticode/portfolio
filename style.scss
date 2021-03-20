@@ -501,7 +501,7 @@ padding-bottom: 0;
 /*CONTACT---------------- * * * */
 
 .contact{
-    min-height: 50vh;
+    min-height: 80vh;
     .card{
         margin: $padding3 auto;
         width: 100%;
@@ -526,6 +526,7 @@ padding-bottom: 0;
     padding: $padding3;
     @include flex--end();
     .navbar{
+
         background-color: $light-cyan;
 
         a{

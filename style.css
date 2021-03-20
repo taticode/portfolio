@@ -405,7 +405,7 @@ header {
 
 /*CONTACT---------------- * * * */
 .contact {
-  min-height: 50vh;
+  min-height: 80vh;
 }
 .contact .card {
   margin: 3rem auto;
