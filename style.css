@@ -126,6 +126,18 @@ body {
   color: #3F676D;
 }
 
+.gradientBottom {
+  display: block;
+  position: fixed;
+  z-index: 300;
+  bottom: 0;
+  background-color: tan;
+  left: 0;
+  width: 100vw;
+  height: 12vh;
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0) 0%, #fffdf8 100%);
+}
+
 .columns {
   flex-wrap: wrap;
 }
@@ -133,6 +145,29 @@ body {
 figure img {
   width: 100%;
   border-radius: 6px;
+}
+
+/* ANIMATIONS ---------------- * * * */
+.intro {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: left bottom;
+}
+
+@keyframes appearUp {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: left bottom;
+  }
+}
+.appear {
+  animation: appearUp 600ms ease-in-out forwards;
 }
 
 /* HEADINGS ---------------- * * * */
@@ -218,6 +253,7 @@ article {
 .card {
   border-radius: 2rem;
   width: 100%;
+  min-height: 38vh;
   overflow: hidden;
   margin: 0 1rem 2rem 0;
   box-shadow: -10px 10px 24px rgba(38, 43, 73, 0.2);
@@ -229,7 +265,6 @@ article {
 }
 .card .infoArticle {
   margin-top: 0;
-  width: 70%;
   padding: 2rem;
 }
 .card .infoArticle h2 {
@@ -357,45 +392,32 @@ header {
 
 /*HERO INTRODUCTION---------------- * * * */
 .hero {
-  min-height: 85vh;
+  top: 30;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
+.hero article {
+  width: 60%;
+  min-height: 10vh;
+}
 
 /*STUDIES---------------- * * * */
-.card::after {
-  content: "";
-  display: block;
-  width: 30%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center;
+.studies .wrapCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
-
-.bootcampUX::after {
-  background-image: url(./img/brands/ux-ui.png);
-}
-
-.jsAepi::after, .jsFictizia::after {
-  background-image: url(./img/brands/js.png);
-}
-
-.angularFictizia::after {
-  background-image: url(./img/brands/angular.png);
-}
-
-.masterFictizia::after, .cursoCice::after {
-  background-image: url(./img/brands/front.png);
-}
-
-.wordpressMadrid::after {
-  background-image: url(./img/brands/wp.png);
+.studies .card {
+  width: 48%;
+  margin: 0;
+  margin-top: 2rem;
 }
 
 /*EXPERIENCE---------------- * * * */
@@ -406,20 +428,42 @@ header {
 /*CONTACT---------------- * * * */
 .contact {
   min-height: 80vh;
+  padding-bottom: 30vh;
+  text-align: center;
 }
 .contact .card {
-  margin: 3rem auto;
-  width: 100%;
-  max-width: 40vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 400px;
   padding: 2rem 1rem;
 }
 .contact .infoArticle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   padding: 0;
+}
+.contact .rrss {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.contact .linkedin, .contact .github {
+  padding: 1rem 1rem 0;
+}
+.contact .linkedin i, .contact .github i {
+  font-size: 40px;
 }
 .contact img {
   max-width: 150px;
@@ -427,9 +471,9 @@ header {
 
 /*FOOTER---------------- * * * */
 .footer {
-  margin-top: 3rem;
+  min-height: 20vh;
   background-color: #6EB3BD;
-  padding: 3rem;
+  padding: 1rem 3rem 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -443,9 +487,16 @@ header {
   color: #FFFDF8;
 }
 
-/*SCROLL APPEAR---------------- * * * */
-.appear {
-  opacity: 1;
+@media (max-width: 950px) {
+  .studies .card {
+    min-height: 40vh;
+  }
+}
+@media (max-width: 780px) {
+  .studies .card {
+    min-height: inherit;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
