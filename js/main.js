@@ -31,29 +31,37 @@ function scrollEffect() {
     let intros = document.getElementsByClassName('intro');
     let windowTop = window.pageYOffset;
     let windowHeight = window.innerHeight;
-    let windowWidth = window.innerWidth;
+    let drops = document.getElementsByClassName('drop');
+    let drops2 = document.getElementsByClassName('drop2');
 
 
     for (let intro of intros) {
         let indexBottom = parseInt(intro.getBoundingClientRect().bottom);
         let indexTop = parseInt(intro.getBoundingClientRect().top);
-        //let alturaElemento = intro.offsetHeight;
         let elementPositionBottom = indexBottom + indexTop;
         let windowBottom = windowTop + windowHeight;
 
-        if (elementPositionBottom >= windowBottom) {
-            intro.classList.remove('appear');
-
-
-        }
-        else if (elementPositionBottom <= windowBottom) {
+        if (elementPositionBottom <= windowBottom) {
             intro.classList.add('appear');
 
         }
 
+        for (let drop of drops) {
+
+            drop.classList.add('dropAnimation');
+            drop.style.animationDelay = '400ms';
+        }
+
+        for (let drop2 of drops2) {
+            drop2.classList.add('dropAnimation');
+            drop2.style.animationDelay = '800ms';
+
+        }
+
     }
+
+
+
+
 }
-
-
-
 

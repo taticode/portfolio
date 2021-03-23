@@ -167,7 +167,7 @@ $generalShadow: rgba(38,43,73,.2);
 
 $family-primary: 'Work Sans', 'cursive';
 $family-secondary: 'Comfortaa', 'sans-serif';
-
+$family-artist:  'Gloria Hallelujah', cursive;
 
 
 
@@ -255,6 +255,16 @@ $padding5: 5rem;
     align-items: center;
     align-content: center;
 }
+
+@mixin flex--between__start{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+
 @mixin  appearGradient {
     background: linear-gradient(180deg, $creamTransparent 0%, $creamSolid 100%);
 }
@@ -263,12 +273,6 @@ $padding5: 5rem;
 
 /* ANIMATIONS ---------------- * * * */
 
-.intro{
-    opacity: 0;
-    transform: scale(0);
-    transform-origin: left bottom;
-
-}
 
 @keyframes appearUp{
     0%{
@@ -286,43 +290,6 @@ $padding5: 5rem;
 
     }
 }
-
-
-.appear{
-
-    animation: appearUp 600ms ease-in-out forwards;
-
-}
-.arrow{
-    position: absolute;
-    top: 100vh;
-    right: 0;
-    margin-right: 50vw;
-    background-color: $cream;
-    width: 40px;
-    height: 40px;
-    border: 1px solid $light-cyan;
-    border-radius: 50%;
-    text-align: center;
-    padding: 8px 5px;
-
-    i::before{
-        color: $light-cyan;
-    }
-}
-
-.arrowDown {
-
-    animation: bounceArrowDown 3000ms ease-in-out infinite;
-    animation-delay: 2000ms;
-}
-.arrowUp {
-    position: fixed;
-    right: $padding2;
-    animation: bounceArrowUp 3000ms ease-in-out infinite;
-    animation-delay: 2000ms;
-}
-
 @keyframes bounceArrowDown {
 
     0%  { transform: scale(1,1)      translateY(0); }
@@ -349,6 +316,66 @@ $padding5: 5rem;
     100%  { transform: scale(1,1)      translateY(0); }
 }
 
+@keyframes splash {
+    0%{
+        transform: scale(0);
+        transform-origin: center;
+    }
+    100%{
+        transform: scale(1);
+        transform-origin: center
+    }
+}
+
+.intro{
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left bottom;
+
+}
+
+.appear{
+
+    animation: appearUp 600ms ease-in-out forwards;
+
+}
+
+.arrow{
+    position: absolute;
+    top: 80vh;
+    right: 0;
+    margin-right: 50vw;
+    background-color: $light-cyan;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 8px 5px;
+
+    i::before{
+        color: $cream;
+    }
+}
+
+.arrowDown {
+
+    animation: bounceArrowDown 3000ms ease-in-out infinite;
+    animation-delay: 2000ms;
+}
+.arrowUp {
+    position: fixed;
+    right: $padding2;
+    animation: bounceArrowUp 3000ms ease-in-out infinite;
+    animation-delay: 2000ms;
+}
+
+.dropAnimation{
+    animation: splash 300ms ease-in forwards;
+    animation-delay: 400ms;
+}   
+
+
+
 /* HEADINGS ---------------- * * * */
 h1{ 
     font-family: $family-primary;
@@ -356,7 +383,8 @@ h1{
     font-weight: normal;
     font-size: $h1Font;
     line-height: 1.5;
-    padding-bottom: $minPadding;
+    padding-bottom: $padding3;
+    padding-top: $padding4;
 
 }
 h2{ 
@@ -400,6 +428,9 @@ a:hover{
     opacity: 1;
 }
 
+.warning{
+    color: $danger;
+}
 /*BIG BLOCKS AND COMPONENTS---------------- * * * */
 
 .container{
@@ -421,7 +452,7 @@ article{
     margin-bottom: $padding3;
 }
 .wrapCards{
-    @include flex--start();
+    @include flex--between__start();
     align-items: flex-start;
 } 
 
@@ -430,7 +461,7 @@ article{
 
 
     border-radius: $bradius;
-    width: 100%;
+    width: 31%;
     min-height: 38vh;
     overflow: hidden;
     margin: 0 $minPadding $padding2 0;
@@ -493,7 +524,14 @@ article{
     }
 
 }
+
+.wrapSideBlocks{
+    width: 100%;
+    @include flex--center();
+}
 .sideBlock{
+    width: 100%;
+    max-width: 990px;
     border-left: 4px solid $peach;
     padding-left: $padding2;
     h2{
@@ -542,10 +580,11 @@ padding-bottom: 0;
         font-size: $h1Font;
         line-height: 1;
         padding-bottom: 0;
+        padding-top: 0;
     }
     .logoText--subtitle{
         font-family: $family-secondary;
-        color: $danger;
+        color: $light-cyan;
         font-size: $h4Font;
         padding: 0 0 0 5px;
     }
@@ -600,23 +639,30 @@ padding-bottom: 0;
 
 
 /*HERO INTRODUCTION---------------- * * * */
-.presentation{
+
+.presentation, .about{
     width: 100%;
     height: 100%;
-    background-image: url(./img/bg-paint.svg);
+    background-image: url(./img/bg-paint-dark.svg);
     background-attachment: fixed;
     background-repeat: repeat-y;
     background-size: contain;
     background-position: right center;
 }
+.about{
+    background-image: url(./img/bg-paint.svg);
+}
 
 .hero{
     top: 30;
-    min-height: 110vh;
+    height: 100vh;
     width: 100%;
+    @include flex--start();
 
-
-    @include flex--center();
+    h1{
+        padding-top: 0;
+        padding-bottom: $minPadding;
+    }
 
     article{
 
@@ -627,6 +673,44 @@ padding-bottom: 0;
 
 
 }
+
+#artist{
+    font-weight: bold;
+    font-family: $family-artist;
+    color: $deep;
+
+}
+
+.drop{ 
+    display: block;
+    background-image: url(./img/drop-success.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $padding5;
+    height: $padding5;
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    transform: scale(0);
+    transform-origin: center;
+
+}
+.drop2{
+    background-image: url(./img/drop-light-cyan.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $padding3;
+    height: $padding3;
+    top: -30px;
+    right: -90px;
+
+}
+
+
 /*PROYECTS---------------- * * * */
 
 

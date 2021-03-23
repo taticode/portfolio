@@ -17,12 +17,12 @@
                 </g>
                 <rect id="Rectangle-Copy-14" x="168" y="25" width="262.069307" height="386"></rect>
             </g>
-            <g id="blanco" transform="translate(49.000000, 72.000000)" fill="#262B49">
+            <g id="blanco" transform="translate(49.000000, 73.000000)" fill="#262B49">
                 <g id="curvas">
-                    <rect id="Rectangle-Copy-15" x="61" y="0" width="170" height="48.5714286" rx="24.2857143"></rect>
-                    <rect id="Rectangle-Copy-16" x="0" y="97.1428571" width="170" height="48.5714286" rx="24.2857143"></rect>
-                    <rect id="Rectangle-Copy-17" x="43.7142857" y="194.285714" width="211.285714" height="48.5714286" rx="24.2857143"></rect>
-                    <rect id="Rectangle-Copy-18" x="51" y="291.428571" width="145.714286" height="48.5714286" rx="24.2857143"></rect>
+                    <rect id="Rectangle-Copy-15" x="61" y="0" width="170" height="47.5714286" rx="23.7857143"></rect>
+                    <rect id="Rectangle-Copy-16" x="0" y="96.1428571" width="170" height="48.5714286" rx="24.2857143"></rect>
+                    <rect id="Rectangle-Copy-17" x="43.7142857" y="193.285714" width="211.285714" height="48.5714286" rx="24.2857143"></rect>
+                    <rect id="Rectangle-Copy-18" x="51" y="290.428571" width="145.714286" height="47.5714286" rx="23.7857143"></rect>
                 </g>
             </g>
         </g>

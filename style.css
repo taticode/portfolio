@@ -148,12 +148,6 @@ figure img {
 }
 
 /* ANIMATIONS ---------------- * * * */
-.intro {
-  opacity: 0;
-  transform: scale(0);
-  transform-origin: left bottom;
-}
-
 @keyframes appearUp {
   0% {
     opacity: 0;
@@ -166,39 +160,6 @@ figure img {
     transform-origin: left bottom;
   }
 }
-.appear {
-  animation: appearUp 600ms ease-in-out forwards;
-}
-
-.arrow {
-  position: absolute;
-  top: 100vh;
-  right: 0;
-  margin-right: 50vw;
-  background-color: #FFFDF8;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #6EB3BD;
-  border-radius: 50%;
-  text-align: center;
-  padding: 8px 5px;
-}
-.arrow i::before {
-  color: #6EB3BD;
-}
-
-.arrowDown {
-  animation: bounceArrowDown 3000ms ease-in-out infinite;
-  animation-delay: 2000ms;
-}
-
-.arrowUp {
-  position: fixed;
-  right: 2rem;
-  animation: bounceArrowUp 3000ms ease-in-out infinite;
-  animation-delay: 2000ms;
-}
-
 @keyframes bounceArrowDown {
   0% {
     transform: scale(1, 1) translateY(0);
@@ -245,6 +206,59 @@ figure img {
     transform: scale(1, 1) translateY(0);
   }
 }
+@keyframes splash {
+  0% {
+    transform: scale(0);
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
+.intro {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: left bottom;
+}
+
+.appear {
+  animation: appearUp 600ms ease-in-out forwards;
+}
+
+.arrow {
+  position: absolute;
+  top: 80vh;
+  right: 0;
+  margin-right: 50vw;
+  background-color: #6EB3BD;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 8px 5px;
+}
+.arrow i::before {
+  color: #FFFDF8;
+}
+
+.arrowDown {
+  animation: bounceArrowDown 3000ms ease-in-out infinite;
+  animation-delay: 2000ms;
+}
+
+.arrowUp {
+  position: fixed;
+  right: 2rem;
+  animation: bounceArrowUp 3000ms ease-in-out infinite;
+  animation-delay: 2000ms;
+}
+
+.dropAnimation {
+  animation: splash 300ms ease-in forwards;
+  animation-delay: 400ms;
+}
+
 /* HEADINGS ---------------- * * * */
 h1 {
   font-family: "Work Sans", "cursive";
@@ -252,7 +266,8 @@ h1 {
   font-weight: normal;
   font-size: calc(1rem + 1.1vw);
   line-height: 1.5;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
+  padding-top: 4rem;
 }
 
 h2 {
@@ -298,6 +313,10 @@ a:hover {
   opacity: 1;
 }
 
+.warning {
+  color: #C84350;
+}
+
 /*BIG BLOCKS AND COMPONENTS---------------- * * * */
 .container {
   margin: 0 auto;
@@ -320,15 +339,15 @@ article {
 .wrapCards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
   align-items: flex-start;
 }
 
 .card {
   border-radius: 2rem;
-  width: 100%;
+  width: 31%;
   min-height: 38vh;
   overflow: hidden;
   margin: 0 1rem 2rem 0;
@@ -391,7 +410,18 @@ article {
   color: #3F676D;
 }
 
+.wrapSideBlocks {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .sideBlock {
+  width: 100%;
+  max-width: 990px;
   border-left: 4px solid #F3C59F;
   padding-left: 2rem;
 }
@@ -437,10 +467,11 @@ header {
   font-size: calc(1rem + 1.1vw);
   line-height: 1;
   padding-bottom: 0;
+  padding-top: 0;
 }
 .logoText .logoText--subtitle {
   font-family: "Comfortaa", "sans-serif";
-  color: #C84350;
+  color: #6EB3BD;
   font-size: calc(1rem + .3vw);
   padding: 0 0 0 5px;
 }
@@ -490,29 +521,71 @@ header {
 }
 
 /*HERO INTRODUCTION---------------- * * * */
-.presentation {
+.presentation, .about {
   width: 100%;
   height: 100%;
-  background-image: url(./img/bg-paint.svg);
+  background-image: url(./img/bg-paint-dark.svg);
   background-attachment: fixed;
   background-repeat: repeat-y;
   background-size: contain;
   background-position: right center;
 }
 
+.about {
+  background-image: url(./img/bg-paint.svg);
+}
+
 .hero {
   top: 30;
-  min-height: 110vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   align-content: center;
+}
+.hero h1 {
+  padding-top: 0;
+  padding-bottom: 1rem;
 }
 .hero article {
   width: 60%;
   min-height: 10vh;
+}
+
+#artist {
+  font-weight: bold;
+  font-family: "Gloria Hallelujah", cursive;
+  color: #262B49;
+}
+
+.drop {
+  display: block;
+  background-image: url(./img/drop-success.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.drop2 {
+  background-image: url(./img/drop-light-cyan.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3rem;
+  height: 3rem;
+  top: -30px;
+  right: -90px;
 }
 
 /*PROYECTS---------------- * * * */

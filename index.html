@@ -6,24 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#6EB3BD" />
-
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--*FONTS---------------- * * * *-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <!--*FONTAWESOME---------------- * * * *-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!--*STYLES---------------- * * * *-->
     <link rel="stylesheet" href="style.css">
 
 
 </head>
 
 <body>
-    <!--     <div class="gradientBottom"></div> -->
+    <!--*HEADER---------------- * * * *-->
     <header>
         <nav class="navbar container">
             <div class="navLogo">
                 <div class="logoImg">
-                    <img src="./img/logo/logo-dev-mode.svg" alt="logo Tatiana García , frontend developer">
+                    <img src="./img/logo/logo.svg" alt="logo Tatiana García , frontend developer">
 
                 </div>
                 <div class="logoText">
@@ -37,7 +40,7 @@
                 <li class="navbar--item"><a>Sobre mí</a></li>
                 <li class="navbar--item"><a>Proyectos</a></li>
                 <li class="navbar--item"><a>Formación</a></li>
-                <li class="navbar--item"><a>cv</a></li>
+                <li class="navbar--item"><a>Contacto</a></li>
                 <li class="navbar--item">
                     <a href="https://www.linkedin.com/in/tatianagarciafrontend/" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
@@ -52,15 +55,31 @@
         </nav>
     </header>
 
+    <!--*MAIN---------------- * * * *-->
     <main>
         <div class="presentation">
 
+            <section class="hero container">
+                <article>
+                    <h1>¡Hola!, mi nombre es Tatiana</h1>
+                    <h2>Desarrolladora Frontend <span class="intro" id="artist">con un puntito de
+                            artista</span> <span class="drop"></span> <span class="drop drop2"></span> </h2>
+
+                </article>
+                <div class="arrow arrowDown">
+                    <a href="#">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+
+            </section>
+
+        </div>
+        <div class="about">
 
             <section class="hero container">
-
                 <article>
-                    <h1 class="">¡Hola!, mi nombre es Tatiana</h1>
-                    <p class="intro">Soy desarrolladora Frontend con un puntito de artista</p>
+                    <h1>Sobre mí</h1>
                     <p class="intro"> Me dedico al diseño y desarrollo de interfaces gráficas con Javascript y Angular
                     </p>
                     <p class="intro">Creo que es importante el equilibrio entre diseño y desarrollo, facilita la
@@ -70,30 +89,42 @@
                         creamos productos digitales para personas, ¿no?</p>
                     <p class="intro">Me encantaría trabajar en proyectos con propósito</p>
                     <p class="intro">Si quieres saber más sobre mí, sigue leyendo</p>
-
-
-
                 </article>
 
-        </div>
-
-        <div class="arrow arrowDown">
-            <a href="#">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-
-        </section>
+                <div class="arrow arrowDown">
+                    <a href="#">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </section>
 
         </div>
-        <div class="bigBgColor">
-            <section class="projects container">
 
-                <h1 class="intro">Proyectos</h1>
 
-                <div class="wrapSideBlocks">
-                    <article class="intro sideBlock">
-                        <h2 class="sideTitle">Título de proyecto</h2>
+        </div>
+
+        <section class="projects container">
+
+            <h1 class="intro">Proyectos</h1>
+
+
+            <div class="wrapCards">
+
+
+                <article class="intro card">
+                    <a href="">
+                        <figure>
+                            <img src="./img/elefante.png" alt="">
+                        </figure>
+                    </a>
+                    <div class="infoArticle">
+                        <h2>Título de proyecto</h2>
+
+                        <h3>Subtítulo de proyecto</h3>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi provident
+                            asperiores blanditiis facilis tempore rerum, omnis quam eum esse dolor!</p>
+
                         <div class="tags">
                             <p class="tag">Angular</p>
                             <p class="tag">Componentes</p>
@@ -103,97 +134,128 @@
                             <p class="tag">Javascript</p>
                             <p class="tag">NPM</p>
                         </div>
-                    </article>
-                </div>
+                    </div>
 
+                </article>
+                <article class="intro card">
+                    <a href="">
+                        <figure>
+                            <img src="./img/elefante.png" alt="">
+                        </figure>
+                    </a>
+                    <div class="infoArticle">
+                        <h2>Título de proyecto</h2>
 
-            </section>
-        </div>
+                        <h3>Subtítulo de proyecto</h3>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi provident
+                            asperiores blanditiis facilis tempore rerum, omnis quam eum esse dolor!</p>
+
+                        <div class="tags">
+                            <p class="tag">Angular</p>
+                            <p class="tag">Componentes</p>
+                            <p class="tag">SCSS</p>
+                            <p class="tag">Git</p>
+                            <p class="tag">Sourcetree</p>
+                            <p class="tag">Javascript</p>
+                            <p class="tag">NPM</p>
+                        </div>
+                    </div>
+
+                </article>
+                <article class="intro card">
+                    <a href="">
+                        <figure>
+                            <img src="./img/elefante.png" alt="">
+                        </figure>
+                    </a>
+                    <div class="infoArticle">
+                        <h2>Título de proyecto</h2>
+
+                        <h3>Subtítulo de proyecto</h3>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi provident
+                            asperiores blanditiis facilis tempore rerum, omnis quam eum esse dolor!</p>
+
+                        <div class="tags">
+                            <p class="tag">Angular</p>
+                            <p class="tag">Componentes</p>
+                            <p class="tag">SCSS</p>
+                            <p class="tag">Git</p>
+                            <p class="tag">Sourcetree</p>
+                            <p class="tag">Javascript</p>
+                            <p class="tag">NPM</p>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
 
         <section class="studies container">
 
 
             <h1 class="intro">Formación</h1>
-            <div class="wrapCards">
-                <article class="intro card bootcampUX">
-                    <div class="infoArticle">
-                        <h2>Bootcamp online de UX-UI</h2>
-                        <h3>Cursado en Trazos</h3>
-                        <p>80 h - Finalizado en Marzo de 2021</p>
-                        <p>Curso intensivo que aporta una base sólida para el desarrollo de un producto
-                            digital
-                            desde la investigación previa a usuarios hasta el diseño final</p>
-                    </div>
+            <div class="wrapSideBlocks">
+                <article class="intro sideBlock">
+                    <h2>Bootcamp online de UX-UI</h2>
+                    <h3>Cursado en Trazos</h3>
+                    <p>80 h - Finalizado en Marzo de 2021</p>
+                    <p>Curso intensivo que aporta una base sólida para el desarrollo de un producto
+                        digital
+                        desde la investigación previa a usuarios hasta el diseño final</p>
 
                 </article>
 
-                <article class="intro card jsAepi">
 
-                    <div class="infoArticle">
-                        <h2>Curso profesional de Javascript</h2>
-                        <h3>Cursado en Aepi</h3>
-                        <p>80 h - Finalizado en Marzo de 2021</p>
-                        <p>En este curso recibí formación en profundidad sobre Javascript Vanilla</p>
-                    </div>
-
-                </article>
-                <article class="intro card jsFictizia">
-
-                    <div class="infoArticle">
-                        <h2>Javascript para desarrolladores</h2>
-                        <h3>Cursado en Fictizia</h3>
-                        <p>45 h - Finalizado en Julio de 2019</p>
-                        <p>Curso de iniciación de Javascript profesional</p>
-                    </div>
-
+                <article class="intro sideBlock">
+                    <h2>Curso profesional de Javascript</h2>
+                    <h3>Cursado en Aepi</h3>
+                    <p>80 h - Finalizado en Marzo de 2021</p>
+                    <p>En este curso recibí formación en profundidad sobre Javascript Vanilla</p>
                 </article>
 
-                <article class="intro card angularFictizia">
-
-                    <div class="infoArticle">
-                        <h2>Curso de Angular 7 </h2>
-                        <h3>Cursado en Fictizia</h3>
-                        <p>36 h - Finalizado en Enero de 2019</p>
-                        <p>En este curso aprendí las bases de Angular 7 y de la arquitectura de una app basada en
-                            componentes</p>
-                    </div>
-
-                </article>
-                <article class="intro card masterFictizia">
-
-                    <div class="infoArticle">
-                        <h2>Máster en diseño de interfaz y front-end con HTML5, CSS3 y JQUERY</h2>
-                        <h3>Cursado en Fictizia</h3>
-                        <p>150 h - Finalizado en Junio de 2018</p>
-                        <p>Máster muy enfocado a maquetación Front-end, aprendí a dominar el diseño responsive y
-                            nociones sólidas sobre diseño</p>
-                    </div>
-
+                <article class="intro sideBlock">
+                    <h2>Javascript para desarrolladores</h2>
+                    <h3>Cursado en Fictizia</h3>
+                    <p>45 h - Finalizado en Julio de 2019</p>
+                    <p>Curso de iniciación de Javascript profesional</p>
                 </article>
 
-                <article class="intro card wordpressMadrid">
-
-                    <div class="infoArticle">
-                        <h2>Curso de Wordpress profesional</h2>
-                        <h3>Cursado en Cursos Wordpress Madrid</h3>
-                        <p>24 h - Finalizado en Junio de 2016</p>
-                        <p>Manejo de Wordpress y tema Divi</p>
-                    </div>
-
+                <article class="intro sideBlock">
+                    <h2>Curso de Angular 7 </h2>
+                    <h3>Cursado en Fictizia</h3>
+                    <p>36 h - Finalizado en Enero de 2019</p>
+                    <p>En este curso aprendí las bases de Angular 7 y de la arquitectura de una app basada en
+                        componentes</p>
+                </article>
+                <article class="intro sideBlock">
+                    <h2>Máster en diseño de interfaz y front-end con HTML5, CSS3 y JQUERY</h2>
+                    <h3>Cursado en Fictizia</h3>
+                    <p>150 h - Finalizado en Junio de 2018</p>
+                    <p>Máster muy enfocado a maquetación Front-end, aprendí a dominar el diseño responsive y
+                        nociones sólidas sobre diseño</p>
                 </article>
 
-                <article class="intro card cursoCice">
+                <article class="intro sideBlock">
+                    <h2>Curso de Wordpress profesional</h2>
+                    <h3>Cursado en Cursos Wordpress Madrid</h3>
+                    <p>24 h - Finalizado en Junio de 2016</p>
+                    <p>Manejo de Wordpress y tema Divi</p>
+                </article>
 
-                    <div class="infoArticle">
-                        <h2>Curso de HTML5, CSS3 y JQUERY</h2>
+                <article class="intro sideBlock">
+                    <h2>Curso de HTML5, CSS3 y JQUERY</h2>
 
-                        <h3>Cursado en Cice</h3>
-                        <p>150 h - Finalizado en Abril de 2016</p>
-                        <p>Iniciación a la programación con HTML5, CSS3 y JQUERY</p>
-                    </div>
-
+                    <h3>Cursado en Cice</h3>
+                    <p>150 h - Finalizado en Abril de 2016</p>
+                    <p>Iniciación a la programación con HTML5, CSS3 y JQUERY</p>
                 </article>
             </div>
+
+
         </section>
 
 
@@ -202,121 +264,129 @@
             <section class="experience container">
 
                 <h1 class="intro">Experiencia</h1>
+                <div class="wrapSideBlocks">
+                    <article class="intro sideBlock">
 
-                <article class="intro sideBlock">
+                        <h2>Frontend con Angular</h2>
+                        <h3>Everis / Orange</h3>
+                        <p> Desde Mayo 2020 - Enero 2021</p>
+                        <p>Desarrollo, con Angular Js, de nuevas funcionalidades y resolución de incidencias para nueva
+                            aplicación de gestión de ventas en las tiendas de Orange. Trabajo en equipo con metodología
+                            agile
+                            (Jira) y control de versiones con Git Kraken.</p>
+                        <div class="tags">
+                            <p class="tag">Angular</p>
+                            <p class="tag">Jira</p>
+                            <p class="tag">Git</p>
+                            <p class="tag">Gitkraken</p>
+                            <p class="tag">Javascript</p>
+                        </div>
 
-                    <h2>Frontend con Angular</h2>
-                    <h3>Everis / Orange</h3>
-                    <p> Desde Mayo 2020 - Enero 2021</p>
-                    <p>Desarrollo, con Angular Js, de nuevas funcionalidades y resolución de incidencias para nueva
-                        aplicación de gestión de ventas en las tiendas de Orange. Trabajo en equipo con metodología
-                        agile
-                        (Jira) y control de versiones con Git Kraken.</p>
-                    <div class="tags">
-                        <p class="tag">Angular</p>
-                        <p class="tag">Jira</p>
-                        <p class="tag">Git</p>
-                        <p class="tag">Gitkraken</p>
-                        <p class="tag">Javascript</p>
-                    </div>
+                    </article>
 
-                </article>
+                    <article class="intro sideBlock">
 
-                <article class="intro sideBlock">
-
-                    <h2>Frontend con Angular</h2>
-                    <h3>Zeeker Solutions</h3>
-                    <p> Noviembre 2019</p>
-                    <p>Maquetación de la web corporativa con scss y desarrollo y maquetación de un producto nuevo junto
-                        al
-                        departamento UX .</p>
-                    <div class="tags">
-                        <p class="tag">Angular</p>
-                        <p class="tag">Componentes</p>
-                        <p class="tag">SCSS</p>
-                        <p class="tag">Git</p>
-                        <p class="tag">Sourcetree</p>
-                        <p class="tag">Javascript</p>
-                        <p class="tag">NPM</p>
-                    </div>
-
-
-                </article>
-
-                <article class="intro sideBlock">
-                    <h2>Frontend con Angular & UI designer</h2>
-                    <h3>EuropeSIP</h3>
-                    <p> Abril 2019</p>
-                    <p> Diseño y desarrollo de una interfaz gráfica para un call center, donde se
-                        pintaban en pantalla las llamadas entrantes, llamadas perdidas y en curso y los usuarios activos
-                        atendiendo
-                        llamadas.
-                        También una interfaz de uso interno de EuropeSIP para la gestión de sus productos y clientes,
-                        con el
-                        mismo
-                        procedimiento: Angular y scss.</p>
-                    <div class="tags">
-                        <p class="tag">Angular</p>
-                        <p class="tag">Componentes</p>
-                        <p class="tag">Javascript</p>
-                        <p class="tag">SCSS</p>
-                        <p class="tag">BEM</p>
-                        <p class="tag">Git</p>
-                        <p class="tag">NPM</p>
-                    </div>
+                        <h2>Frontend con Angular</h2>
+                        <h3>Zeeker Solutions</h3>
+                        <p> Noviembre 2019</p>
+                        <p>Maquetación de la web corporativa con scss y desarrollo y maquetación de un producto nuevo
+                            junto
+                            al
+                            departamento UX .</p>
+                        <div class="tags">
+                            <p class="tag">Angular</p>
+                            <p class="tag">Componentes</p>
+                            <p class="tag">SCSS</p>
+                            <p class="tag">Git</p>
+                            <p class="tag">Sourcetree</p>
+                            <p class="tag">Javascript</p>
+                            <p class="tag">NPM</p>
+                        </div>
 
 
-                </article>
+                    </article>
 
-                <article class="intro sideBlock">
-                    <h2>Frontend & UI designer</h2>
-                    <h3>Inserver</h3>
-                    <p> Febrero 2019</p>
-                    <p>Diseño y desarrollo de cursos online con Sketch y temas
-                        hijo de Moodle. Mi tarea era realizar diseños previos
-                        en Sketch de cursos online hechos con Moodle, una vez aprobado el diseño lo maquetaba
-                        con temas hijo en Moodle.</p>
-                    <div class="tags">
-                        <p class="tag">Moodle</p>
-                        <p class="tag">SCSS</p>
-                        <p class="tag">BEM</p>
-
-                    </div>
-
-
-                </article>
-
-
-                <article class="intro sideBlock">
-                    <h2>Frontend con Angular & UI designer</h2>
-                    <h3>Sapos y Princesas</h3>
-                    <p>Agosto 2017</p>
-                    <p> Prácticas en empresa con una duración de 6 meses, mis tareas eran el diseño y desarrollo de
-                        landings
-                        de
-                        secciones nuevas, promociones y concursos de esta revista online en Wordpress, y la adaptación a
-                        diseño
-                        responsive de la propia web de Sapos y Princesas.</p>
-                    <div class="tags">
-                        <p class="tag">Wordpress</p>
-                        <p class="tag">SCSS</p>
-                        <p class="tag">BEM</p>
-                        <p class="tag">Git</p>
-                        <p class="tag">Asana</p>
-                        <p class="tag">NPM</p>
-                    </div>
+                    <article class="intro sideBlock">
+                        <h2>Frontend con Angular & UI designer</h2>
+                        <h3>EuropeSIP</h3>
+                        <p> Abril 2019</p>
+                        <p> Diseño y desarrollo de una interfaz gráfica para un call center, donde se
+                            pintaban en pantalla las llamadas entrantes, llamadas perdidas y en curso y los usuarios
+                            activos
+                            atendiendo
+                            llamadas.
+                            También una interfaz de uso interno de EuropeSIP para la gestión de sus productos y
+                            clientes,
+                            con el
+                            mismo
+                            procedimiento: Angular y scss.</p>
+                        <div class="tags">
+                            <p class="tag">Angular</p>
+                            <p class="tag">Componentes</p>
+                            <p class="tag">Javascript</p>
+                            <p class="tag">SCSS</p>
+                            <p class="tag">BEM</p>
+                            <p class="tag">Git</p>
+                            <p class="tag">NPM</p>
+                        </div>
 
 
-                </article>
+                    </article>
+
+                    <article class="intro sideBlock">
+                        <h2>Frontend & UI designer</h2>
+                        <h3>Inserver</h3>
+                        <p> Febrero 2019</p>
+                        <p>Diseño y desarrollo de cursos online con Sketch y temas
+                            hijo de Moodle. Mi tarea era realizar diseños previos
+                            en Sketch de cursos online hechos con Moodle, una vez aprobado el diseño lo maquetaba
+                            con temas hijo en Moodle.</p>
+                        <div class="tags">
+                            <p class="tag">Moodle</p>
+                            <p class="tag">SCSS</p>
+                            <p class="tag">BEM</p>
+
+                        </div>
+
+
+                    </article>
+
+
+                    <article class="intro sideBlock">
+                        <h2>Frontend con Angular & UI designer</h2>
+                        <h3>Sapos y Princesas</h3>
+                        <p>Agosto 2017</p>
+                        <p> Prácticas en empresa con una duración de 6 meses, mis tareas eran el diseño y desarrollo de
+                            landings
+                            de
+                            secciones nuevas, promociones y concursos de esta revista online en Wordpress, y la
+                            adaptación a
+                            diseño
+                            responsive de la propia web de Sapos y Princesas.</p>
+                        <div class="tags">
+                            <p class="tag">Wordpress</p>
+                            <p class="tag">SCSS</p>
+                            <p class="tag">BEM</p>
+                            <p class="tag">Git</p>
+                            <p class="tag">Asana</p>
+                            <p class="tag">NPM</p>
+                        </div>
+
+
+                    </article>
+                </div>
+
+
+
 
             </section>
 
         </div>
         <section class="contact container">
-            <h1 class="intro">Descarga mi cv</h1>
+            <h1 class="intro">Contacto</h1>
             <article class="intro card">
-
-                <h2>Escanea este código QR para descargar mi cv desde Google drive</h2>
+                <h2 class="warning">Añadir descarga de cv normal con botón !!!</h2>
+                <h2>Si te resulta más cómodo puedes escanear este código QR para descargar mi cv desde Google drive</h2>
                 <figure>
                     <img src="./img/qr-code.png" alt="código QR para descargar el cv en pdf de Tatiana">
                 </figure>
@@ -353,7 +423,7 @@
                 <li class="navbar--item"><a>Sobre mí</a></li>
                 <li class="navbar--item"><a>Proyectos</a></li>
                 <li class="navbar--item"><a>Formación</a></li>
-                <li class="navbar--item"><a>cv</a></li>
+                <li class="navbar--item"><a>Contacto</a></li>
                 <li class="navbar--item">
                     <a href="https://www.linkedin.com/in/tatianagarciafrontend/" class="icon">
                         <i class="fab fa-linkedin-in"></i>
