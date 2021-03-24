@@ -31,6 +31,7 @@ function scrollEffect() {
     let intros = document.getElementsByClassName('intro');
     let windowTop = window.pageYOffset;
     let windowHeight = window.innerHeight;
+    let artist = document.getElementById('artist');
     let drops = document.getElementsByClassName('drop');
     let drops2 = document.getElementsByClassName('drop2');
 
@@ -45,18 +46,8 @@ function scrollEffect() {
             intro.classList.add('appear');
 
         }
+        artist.style.animationDelay = '1000ms'
 
-        for (let drop of drops) {
-
-            drop.classList.add('dropAnimation');
-            drop.style.animationDelay = '400ms';
-        }
-
-        for (let drop2 of drops2) {
-            drop2.classList.add('dropAnimation');
-            drop2.style.animationDelay = '800ms';
-
-        }
 
     }
 

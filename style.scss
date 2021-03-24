@@ -189,7 +189,7 @@ $iFont: 40px;
 }
 body{
     background-color: $cream;
-    color: $cyan;
+    color: $deep;
 }
 .gradientBottom{
 
@@ -262,6 +262,13 @@ $padding5: 5rem;
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
+}
+@mixin flex--start__end{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
 }
 
 
@@ -389,7 +396,7 @@ h1{
 }
 h2{ 
     font-family: $family-secondary;
-    color: $cyan;
+    color: $deep;
     font-size: $h2Font;
     line-height: 1.5;
     font-weight: bold;
@@ -459,7 +466,7 @@ article{
 
 .card{
 
-
+    background-color: $cream;
     border-radius: $bradius;
     width: 31%;
     min-height: 38vh;
@@ -483,7 +490,10 @@ article{
     }
 } 
 
-
+.fixed{
+    position: fixed;
+    top: 10vh;
+}
 .tags{
     @include flex--start();
 }
@@ -520,18 +530,18 @@ article{
         color: $peach;
     }
     p{
-        color: $cyan;
+        color: $deep;
     }
 
 }
 
 .wrapSideBlocks{
     width: 100%;
-    @include flex--center();
+    @include flex--start();
 }
 .sideBlock{
     width: 100%;
-    max-width: 990px;
+    max-width: 800px;
     border-left: 4px solid $peach;
     padding-left: $padding2;
     h2{
@@ -540,6 +550,29 @@ article{
 }
 
 
+.bucket{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/bg-paint-dark.svg);
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: right center;
+}
+
+.bucket--cyan{
+    background-image: url(./img/bg-paint.svg);
+}
+.bucket--peach{
+    background-image: url(./img/bg-paint-peach.svg);
+}
+.bucket--success{
+    background-image: url(./img/bg-paint-successs.svg);
+}
+
+.bucket--cyan__transp{
+    background-image: url(./img/bg-paint--cyan__transp.svg);
+}
 
 /*HEADER---------------- * * * */
 
@@ -640,25 +673,12 @@ padding-bottom: 0;
 
 /*HERO INTRODUCTION---------------- * * * */
 
-.presentation, .about{
-    width: 100%;
-    height: 100%;
-    background-image: url(./img/bg-paint-dark.svg);
-    background-attachment: fixed;
-    background-repeat: repeat-y;
-    background-size: contain;
-    background-position: right center;
-}
-.about{
-    background-image: url(./img/bg-paint.svg);
-}
 
 .hero{
     top: 30;
     height: 100vh;
     width: 100%;
-    @include flex--start();
-
+    @include flex--start__end();
     h1{
         padding-top: 0;
         padding-bottom: $minPadding;
@@ -668,6 +688,7 @@ padding-bottom: 0;
 
         width: 60%;
         min-height: 10vh;
+        margin-bottom: 20vh;
 
     }
 
@@ -677,7 +698,7 @@ padding-bottom: 0;
 #artist{
     font-weight: bold;
     font-family: $family-artist;
-    color: $deep;
+    color: $light-cyan;
 
 }
 
