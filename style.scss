@@ -176,6 +176,7 @@ $h2Font: calc(1rem + .5vw);
 $h3Font: calc(1rem + .4vw);
 $h4Font: calc(1rem + .3vw);
 $pFont: calc(1rem + .1vw);
+$iconsDecoration: calc(3rem + .1vw);
 $tagFont: 12px;
 $iFont: 40px;
 
@@ -805,8 +806,21 @@ padding-bottom: 0;
 
     }
 }
+/*ICONS---------------- * * * */
+
+.greet{
+    display: block;
+    box-sizing: border-box;
+    width: $iconsDecoration;
+    height: $iconsDecoration;
+    background-image: url(./img/icons/open-hand.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
 
 
+/*MEDIA QUERIES---------------- * * * */
 
 @media (max-width: 950px){
     .studies{

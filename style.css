@@ -681,6 +681,18 @@ header {
   color: #FFFDF8;
 }
 
+/*ICONS---------------- * * * */
+.greet {
+  display: block;
+  box-sizing: border-box;
+  width: calc(3rem + .1vw);
+  height: calc(3rem + .1vw);
+  background-image: url(./img/icons/open-hand.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*MEDIA QUERIES---------------- * * * */
 @media (max-width: 950px) {
   .studies .card {
     min-height: 40vh;

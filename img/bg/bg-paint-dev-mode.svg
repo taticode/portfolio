@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="380px" viewBox="0 0 1200 380" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>bg-paint-dev-mode</title>
+    <desc>Created with Sketch.</desc>
+    <g id="bg-paint-dev-mode" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="fondo-pintura-copy-2" transform="translate(769.000000, -53.000000)">
+            <g id="color" transform="translate(0.000000, 24.000000)" fill="#6EB3BD">
+                <g id="curvas">
+                    <rect id="Rectangle-Copy-4" transform="translate(194.188119, 218.000000) rotate(-360.000000) translate(-194.188119, -218.000000) " x="135.970297" y="193.222222" width="116.435644" height="49.555556" rx="24.777778"></rect>
+                    <rect id="Rectangle-Copy-5" x="104.435644" y="290.333333" width="104.306931" height="49.555556" rx="24.777778"></rect>
+                    <g id="Rectangle-Copy-9" transform="translate(143.000000, 387.000000)">
+                        <rect id="Rectangle-Copy-6" x="0" y="0" width="111.584158" height="48.5555556" rx="24.2777778"></rect>
+                    </g>
+                    <rect id="Rectangle-Copy-7" x="143" y="0.333333778" width="111.584158" height="48.5555556" rx="24.2777778"></rect>
+                    <rect id="Rectangle-Copy-8" x="58" y="96" width="133.415842" height="49.555556" rx="24.777778"></rect>
+                </g>
+                <rect id="Rectangle-Copy-14" x="168" y="25" width="262.069307" height="386"></rect>
+            </g>
+            <g id="blanco" transform="translate(49.000000, 73.000000)" fill="#262B49">
+                <g id="curvas">
+                    <rect id="Rectangle-Copy-15" x="61" y="0" width="170" height="47.5714286" rx="23.7857143"></rect>
+                    <rect id="Rectangle-Copy-16" x="0" y="96.1428571" width="170" height="48.5714286" rx="24.2857143"></rect>
+                    <rect id="Rectangle-Copy-17" x="43.7142857" y="193.285714" width="211.285714" height="48.5714286" rx="24.2857143"></rect>
+                    <rect id="Rectangle-Copy-18" x="51" y="290.428571" width="145.714286" height="47.5714286" rx="23.7857143"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
