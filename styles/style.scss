@@ -675,6 +675,43 @@ padding-bottom: 0;
 
 
 /*PROYECTS---------------- * * * */
+.projects{
+    a{
+        width: 100%;
+        height: 100%;
+    }
+    .working{
+        display: block;
+        min-height: 250px;
+        width: 100%;
+        background-color: $light-cyan;
+    }
+    .gear{
+        background-image: url(../img/icons/gear-cyan.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: $padding5;
+        height: $padding5;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        animation: roll 1000ms ease-in-out infinite forwards;
+
+    }
+    .gear-b{
+        background-image: url(../img/icons/gear-peach.png);
+        content: '';
+        display: block;
+        width: $padding3;
+        height: $padding3;
+        top: 30%;
+        left: 35%;
+        animation-direction: reverse;
+
+    }
+}
 
 
 
@@ -762,6 +799,7 @@ padding-bottom: 0;
     background-repeat: no-repeat;
     animation: hi 400ms ease-in-out 3 forwards;
     transform-origin: center bottom;
+
 }
 
 
@@ -835,6 +873,19 @@ padding-bottom: 0;
     }
     
 }
+@keyframes roll {
+
+    0%{
+        transform: rotateZ(0deg)
+    }
+
+    100%{
+        transform: rotateZ(90deg)
+    }
+    
+}
+
+
 
 /*MEDIA QUERIES---------------- * * * */
 
