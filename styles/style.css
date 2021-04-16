@@ -229,8 +229,8 @@ figure img {
 .arrow {
   position: absolute;
   top: 80vh;
-  right: -50%;
-  margin-right: 50vw;
+  right: 100%;
+  margin-right: -50%;
   background-color: #6EB3BD;
   width: 40px;
   height: 40px;
@@ -438,7 +438,7 @@ article {
 .bucket {
   width: 100%;
   height: 100%;
-  background-image: url(./img/bg-dark-opac-25.svg);
+  background-image: url(../img/bg-dark-opac-25.svg);
   background-attachment: fixed;
   background-repeat: repeat-y;
   background-size: contain;
@@ -446,15 +446,15 @@ article {
 }
 
 .bucket--cyan {
-  background-image: url(./img/bg-cyan__trans__opac-25.svg);
+  background-image: url(../img/bg-cyan__trans__opac-25.svg);
 }
 
 .bucket--peach {
-  background-image: url(./img/bg-peach-opac-25.svg);
+  background-image: url(../img/bg-peach-opac-25.svg);
 }
 
 .bucket--success {
-  background-image: url(./img/bg-success-opac-50.svg);
+  background-image: url(../img/bg-success-opac-50.svg);
 }
 
 /*HEADER---------------- * * * */
@@ -583,7 +583,7 @@ header {
 
 .drop {
   display: block;
-  background-image: url(./img/drop-success.png);
+  background-image: url(../img/drop-success.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
@@ -598,7 +598,7 @@ header {
 }
 
 .drop2 {
-  background-image: url(./img/drop-light-cyan.png);
+  background-image: url(../img/drop-light-cyan.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
@@ -693,7 +693,7 @@ header {
   box-sizing: border-box;
   width: calc(3rem + .1vw);
   height: calc(3rem + .1vw);
-  background-image: url(./img/icons/open-hand.png);
+  background-image: url(../img/icons/open-hand.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
