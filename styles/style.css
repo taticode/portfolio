@@ -147,75 +147,6 @@ figure img {
   border-radius: 6px;
 }
 
-/* ANIMATIONS ---------------- * * * */
-@keyframes appearUp {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-    transform-origin: left bottom;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    transform-origin: left bottom;
-  }
-}
-@keyframes bounceArrowDown {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.05, 0.95) translateY(0);
-  }
-  50% {
-    transform: scale(0.9, 1.1) translateY(-10px);
-  }
-  57% {
-    transform: scale(1, 1) translateY(0);
-  }
-  60% {
-    transform: scale(1, 1) translateY(-7px);
-  }
-  64% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
-}
-@keyframes bounceArrowUp {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  50% {
-    transform: scale(1, 1) translateY(7px);
-  }
-  57% {
-    transform: scale(1, 1) translateY(0);
-  }
-  60% {
-    transform: scale(0.9, 1.1) translateY(10px);
-  }
-  64% {
-    transform: scale(1.05, 0.95) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
-}
-@keyframes splash {
-  0% {
-    transform: scale(0);
-    transform-origin: center;
-  }
-  100% {
-    transform: scale(1);
-    transform-origin: center;
-  }
-}
 .intro {
   opacity: 0;
   transform: scale(0);
@@ -689,15 +620,98 @@ header {
 
 /*ICONS---------------- * * * */
 .greet {
+  margin: 2rem;
   display: block;
   box-sizing: border-box;
-  width: calc(3rem + .1vw);
-  height: calc(3rem + .1vw);
+  width: calc(5rem + .1vw);
+  height: calc(5rem + .1vw);
   background-image: url(../img/icons/open-hand.png);
   background-size: contain;
   background-repeat: no-repeat;
+  animation: hi 400ms ease-in-out 3 forwards;
+  transform-origin: center bottom;
 }
 
+/*ANIMATIONS---------------- * * * */
+@keyframes appearUp {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: left bottom;
+  }
+}
+@keyframes bounceArrowDown {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  50% {
+    transform: scale(0.9, 1.1) translateY(-10px);
+  }
+  57% {
+    transform: scale(1, 1) translateY(0);
+  }
+  60% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes bounceArrowUp {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  50% {
+    transform: scale(1, 1) translateY(7px);
+  }
+  57% {
+    transform: scale(1, 1) translateY(0);
+  }
+  60% {
+    transform: scale(0.9, 1.1) translateY(10px);
+  }
+  64% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes splash {
+  0% {
+    transform: scale(0);
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
+@keyframes hi {
+  0% {
+    transform: rotateZ(30deg);
+  }
+  50% {
+    transform: rotateZ(-30deg);
+  }
+  100% {
+    transform: rotateZ(30deg);
+  }
+}
 /*MEDIA QUERIES---------------- * * * */
 @media (max-width: 950px) {
   .studies .card {
