@@ -177,11 +177,18 @@ $h3Font: calc(1rem + .4vw);
 $h4Font: calc(1rem + .3vw);
 $pFont: calc(1rem + .1vw);
 $iconsDecoration: calc(5rem + .1vw);
-$tagFont: 12px;
+$tagFont: .8rem;
 $iFont: 40px;
 
 /*GLOBAL VARIABLES & MIXINS---------------- * * * */
 
+
+$bradius: 2rem;
+$minPadding: 1rem;
+$padding2: 2rem;
+$padding3: 3rem;
+$padding4: 4rem;
+$padding5: 5rem;
 
 *{
     font-family: $family-secondary;
@@ -210,17 +217,10 @@ body{
 
 figure img{
     width: 100%;
-    border-radius: 6px;
+    border-radius: $padding2 $padding2 0 0;
 
 }
 
-
-$bradius: 2rem;
-$minPadding: 1rem;
-$padding2: 2rem;
-$padding3: 3rem;
-$padding4: 4rem;
-$padding5: 5rem;
 
 
 @mixin shadow {
@@ -258,6 +258,13 @@ $padding5: 5rem;
 }
 
 @mixin flex--between__start{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+@mixin flex--start__start{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -412,12 +419,12 @@ article{
 
     background-color: $cream;
     border-radius: $bradius;
-    width: 31%;
-    min-height: 38vh;
+    width: 31.5%;
+    min-height: 70vh;
     overflow: hidden;
-    margin: 0 $minPadding $padding2 0;
+    margin: 0 $minPadding $minPadding 0;
     @include shadow();
-    @include flex--start();
+    @include flex--start__start();
 
 
     .infoArticle{
@@ -446,7 +453,6 @@ article{
     font-size: $tagFont;
     font-weight: bold;
     animation-delay: 200ms;
-    min-width: 100px;
     text-align: center;
     color: $cream;
     line-height: 0;
@@ -680,24 +686,98 @@ padding-bottom: 0;
         width: 100%;
         height: 100%;
     }
-    .working{
+    figure{
         display: block;
-        min-height: 250px;
+        height: 100%;
+        height: 30vh;
+        max-height: 200px;
+        overflow: hidden;
         width: 100%;
-        background-color: $light-cyan;
+        background-color: $lightCyanTransparent;
+
     }
+    .factory{
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+        width: 40%;
+        height: 40%;
+        background-color: $light-cyan;
+        border: 5px solid $deep;
+        border-radius: $minPadding $minPadding 3px 3px;
+        animation: factoryBounce 3000ms ease-in-out 3 forwards;
+
+
+    }
+    .factory::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -$padding2;
+        left: $padding4;
+        height: $padding2;
+        width: $padding2;
+        border: 5px solid $deep;
+        border-top: 10px solid $deep;
+        background-color: $success;
+
+    }
+    .factory::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -$padding3;
+        left: $minPadding;
+        height: $padding3;
+        width: $padding2;
+        border: 5px solid $deep;
+        border-top: 20px solid $deep;
+        background-color: $peach;
+
+    }
+
+    .vapor{
+        margin: 0;
+        position: absolute;
+        left: 17%;
+        top: $padding2;
+        box-sizing: border-box;
+        width: 15%;
+        height: $padding4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+            
+            span{
+
+                display: block;
+                box-sizing: border-box;
+                width: 4%;
+                height: 100%;
+                background-color: $deep;
+                margin-left: 10%;
+                border-radius: 50%;
+                animation: steam 3000ms ease-in-out 3 forwards;
+                filter: blur(0px);
+            }
+    
+    }
+    
+    
+
+
     .gear{
         background-image: url(../img/icons/gear-cyan.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-repeat: no-repeat;
         background-position: center;
-        width: $padding5;
-        height: $padding5;
-        position: absolute;
-        top: 30%;
-        left: 10%;
-        animation: roll 1000ms ease-in-out infinite forwards;
+        width: $padding4;
+        height: $padding4;
+        position: fixed;
+        top: 5%;
+        left: 3%;
+        animation: roll 1000ms ease-in-out 9 forwards;
 
     }
     .gear-b{
@@ -706,8 +786,19 @@ padding-bottom: 0;
         display: block;
         width: $padding3;
         height: $padding3;
-        top: 30%;
-        left: 35%;
+        top: 2%;
+        left: 30%;
+        animation-direction: reverse;
+
+    }
+    .gear-c{
+        background-image: url(../img/icons/gear-success.png);
+        content: '';
+        display: block;
+        width: $padding3;
+        height: $padding3;
+        top: 45%;
+        left: 50%;
         animation-direction: reverse;
 
     }
@@ -832,12 +923,10 @@ padding-bottom: 0;
     64%  { transform: scale(1.1,.9)   translateY(0); }
     100%   { transform: scale(1,1)      translateY(0); }
 
-}
+} 
+
 
 @keyframes bounceArrowUp {
-
-
-
 
     0%   { transform: scale(1,1)      translateY(0); }
     10%  { transform: scale(1.1,.9)   translateY(0); }
@@ -883,6 +972,35 @@ padding-bottom: 0;
         transform: rotateZ(90deg)
     }
     
+}
+
+@keyframes factoryBounce {
+
+    0%  { transform: scale(1,1)      translateY(0); }
+    80%  { transform: scale(1.1,.95) translateY(0); }
+    85%  { transform: scale(.9,1.1)   translateY(-10px); }
+    100%   { transform: scale(1,1)      translateY(0); }
+
+}
+
+@keyframes steam{
+    0%{
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+
+    }
+    
+    80%{
+        transform: translateY(-10px) scaleX(2);
+        opacity: 1;
+        filter: blur(5px);
+    }
+    100%{
+        transform: translateY(-100px) scaleX(3);
+        opacity: 0;
+        filter: blur(10px);
+
+    }
 }
 
 

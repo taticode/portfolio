@@ -144,7 +144,7 @@ body {
 
 figure img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .intro {
@@ -279,16 +279,16 @@ article {
 .card {
   background-color: #FFFDF8;
   border-radius: 2rem;
-  width: 31%;
-  min-height: 38vh;
+  width: 31.5%;
+  min-height: 70vh;
   overflow: hidden;
-  margin: 0 1rem 2rem 0;
+  margin: 0 1rem 1rem 0;
   box-shadow: -10px 10px 24px rgba(38, 43, 73, 0.2);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 .card .infoArticle {
   margin-top: 0;
@@ -315,10 +315,9 @@ article {
 }
 
 .tag {
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: bold;
   animation-delay: 200ms;
-  min-width: 100px;
   text-align: center;
   color: #FFFDF8;
   line-height: 0;
@@ -545,11 +544,72 @@ header {
   width: 100%;
   height: 100%;
 }
-.projects .working {
+.projects figure {
   display: block;
-  min-height: 250px;
+  height: 100%;
+  height: 30vh;
+  max-height: 200px;
+  overflow: hidden;
   width: 100%;
+  background-color: rgba(110, 179, 189, 0.2);
+}
+.projects .factory {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 40%;
+  height: 40%;
   background-color: #6EB3BD;
+  border: 5px solid #262B49;
+  border-radius: 1rem 1rem 3px 3px;
+  animation: factoryBounce 3000ms ease-in-out 3 forwards;
+}
+.projects .factory::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2rem;
+  left: 4rem;
+  height: 2rem;
+  width: 2rem;
+  border: 5px solid #262B49;
+  border-top: 10px solid #262B49;
+  background-color: #B8E986;
+}
+.projects .factory::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  height: 3rem;
+  width: 2rem;
+  border: 5px solid #262B49;
+  border-top: 20px solid #262B49;
+  background-color: #F3C59F;
+}
+.projects .vapor {
+  margin: 0;
+  position: absolute;
+  left: 17%;
+  top: 2rem;
+  box-sizing: border-box;
+  width: 15%;
+  height: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projects .vapor span {
+  display: block;
+  box-sizing: border-box;
+  width: 4%;
+  height: 100%;
+  background-color: #262B49;
+  margin-left: 10%;
+  border-radius: 50%;
+  animation: steam 3000ms ease-in-out 3 forwards;
+  filter: blur(0px);
 }
 .projects .gear {
   background-image: url(../img/icons/gear-cyan.png);
@@ -557,12 +617,12 @@ header {
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-position: center;
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  animation: roll 1000ms ease-in-out infinite forwards;
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 5%;
+  left: 3%;
+  animation: roll 1000ms ease-in-out 9 forwards;
 }
 .projects .gear-b {
   background-image: url(../img/icons/gear-peach.png);
@@ -570,8 +630,18 @@ header {
   display: block;
   width: 3rem;
   height: 3rem;
-  top: 30%;
-  left: 35%;
+  top: 2%;
+  left: 30%;
+  animation-direction: reverse;
+}
+.projects .gear-c {
+  background-image: url(../img/icons/gear-success.png);
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  top: 45%;
+  left: 50%;
   animation-direction: reverse;
 }
 
@@ -752,6 +822,36 @@ header {
   }
   100% {
     transform: rotateZ(90deg);
+  }
+}
+@keyframes factoryBounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  80% {
+    transform: scale(1.1, 0.95) translateY(0);
+  }
+  85% {
+    transform: scale(0.9, 1.1) translateY(-10px);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-10px) scaleX(2);
+    opacity: 1;
+    filter: blur(5px);
+  }
+  100% {
+    transform: translateY(-100px) scaleX(3);
+    opacity: 0;
+    filter: blur(10px);
   }
 }
 /*MEDIA QUERIES---------------- * * * */

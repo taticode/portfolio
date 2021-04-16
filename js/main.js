@@ -32,8 +32,6 @@ function scrollEffect() {
     let windowTop = window.pageYOffset;
     let windowHeight = window.innerHeight;
     let artist = document.getElementById('artist');
-    let drops = document.getElementsByClassName('drop');
-    let drops2 = document.getElementsByClassName('drop2');
 
 
     for (let intro of intros) {
