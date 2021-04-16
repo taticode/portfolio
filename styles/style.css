@@ -229,7 +229,7 @@ figure img {
 .arrow {
   position: absolute;
   top: 80vh;
-  right: 0;
+  right: -50%;
   margin-right: 50vw;
   background-color: #6EB3BD;
   width: 40px;
@@ -560,6 +560,7 @@ header {
   align-content: flex-end;
 }
 .hero h1 {
+  display: block;
   padding-top: 0;
   padding-bottom: 1rem;
 }
@@ -567,6 +568,11 @@ header {
   width: 60%;
   min-height: 10vh;
   margin-bottom: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
 }
 
 #artist {

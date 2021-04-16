@@ -351,7 +351,7 @@ $padding5: 5rem;
 .arrow{
     position: absolute;
     top: 80vh;
-    right: 0;
+    right: -50%;
     margin-right: 50vw;
     background-color: $light-cyan;
     width: 40px;
@@ -672,13 +672,13 @@ padding-bottom: 0;
 
 /*HERO INTRODUCTION---------------- * * * */
 
-
 .hero{
     top: 30;
     height: 100vh;
     width: 100%;
     @include flex--start__end();
     h1{
+        display: block;
         padding-top: 0;
         padding-bottom: $minPadding;
     }
@@ -688,7 +688,7 @@ padding-bottom: 0;
         width: 60%;
         min-height: 10vh;
         margin-bottom: 20vh;
-
+        @include flex--start();
     }
 
 
