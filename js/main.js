@@ -5,6 +5,9 @@
 const HEADER = document.getElementsByTagName('header')[0];
 const MAINCONTENT = document.getElementsByTagName('main')[0];
 let headerValues = HEADER.values;
+let menuTabs = document.getElementsByClassName('tabs');
+let allSideblocks = document.getElementsByClassName('sideBlock');
+
 
 if (ResizeObserver) {
     const ro = new ResizeObserver(entries => {
@@ -51,6 +54,10 @@ function scrollEffect() {
 
 
 
+
+}
+
+function tabsNavigation() {
 
 }
 

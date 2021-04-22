@@ -5,7 +5,7 @@
     <desc>Created with Sketch.</desc>
     <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g>
-            <rect id="bg-cream" fill="#FFFDF8" x="0" y="0" width="124" height="180" rx="15"></rect>
+            <rect id="bg-cream" fill="#E6EEF0" x="0" y="0" width="124" height="180" rx="15"></rect>
             <rect id="bg-deep" fill="#262B49" x="74" y="0" width="128" height="180" rx="15"></rect>
             <g id="curves-deep" transform="translate(29.000000, 0.000000)" fill="#262B49">
                 <rect id="pill-deep" x="23" y="0" width="53" height="20" rx="10"></rect>
@@ -14,7 +14,7 @@
                 <rect id="pill-deep" x="35" y="160" width="46" height="20" rx="10"></rect>
                 <rect id="pill-deep" x="0" y="40" width="55" height="20" rx="10"></rect>
             </g>
-            <g id="curves-cream" transform="translate(17.000000, 20.000000)" fill="#FFFDF8">
+            <g id="curves-cream" transform="translate(17.000000, 20.000000)" fill="#E6EEF0">
                 <rect id="pill-cream" x="25" y="0" width="70" height="20" rx="10"></rect>
                 <rect id="pill-cream" x="0" y="40" width="70" height="20" rx="10"></rect>
                 <rect id="pill-cream" x="18" y="80" width="87" height="20" rx="10"></rect>

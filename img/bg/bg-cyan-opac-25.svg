@@ -4,8 +4,9 @@
     <title>bg-cyan-opac-25</title>
     <desc>Created with Sketch.</desc>
     <g id="bg-cyan-opac-25" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#D5E6E9" x="0" y="0" width="1200" height="318"></rect>
         <g id="fondo-pintura-copy-2" transform="translate(769.000000, -80.000000)">
-            <g id="color" transform="translate(0.000000, 40.000000)" fill="#DBECEE">
+            <g id="color" transform="translate(0.000000, 40.000000)" fill="#6EB3BD">
                 <g id="curvas">
                     <rect id="Rectangle-Copy-4" transform="translate(178.217822, 180.000000) rotate(-360.000000) translate(-178.217822, -180.000000) " x="120" y="160" width="116.435644" height="40" rx="20"></rect>
                     <rect id="Rectangle-Copy-5" x="107" y="239" width="104.306931" height="40" rx="20"></rect>
@@ -16,7 +17,7 @@
                 </g>
                 <rect id="Rectangle-Copy-14" x="168" y="1.70530257e-13" width="262.069307" height="359"></rect>
             </g>
-            <g id="blanco" transform="translate(31.000000, 80.000000)" fill="#FFFDF8">
+            <g id="blanco" transform="translate(31.000000, 80.000000)" fill="#D5E6E9">
                 <g id="curvas">
                     <rect id="Rectangle-Copy-15" x="7" y="0" width="247" height="40" rx="20"></rect>
                     <rect id="Rectangle-Copy-16" x="0" y="80" width="188" height="40" rx="20"></rect>

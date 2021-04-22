@@ -131,7 +131,7 @@ fullhd >>>>>>>>>> up to 1400 px */
 
 /*COLORS---------------- * * * */
 
-$cream: #FFFDF8;
+$cream: #e6eef0;
 $cyan: #3F676D;
 $light-cyan: #6EB3BD;
 $peach:	#F3C59F;
@@ -145,7 +145,7 @@ $dangerShadow: #9C333D;
 
 
 $creamTransparent: rgba(255,253,248,0);
-$creamSolid: rgba(255,253,248,1);
+$creamSolid: rgba(230,238,240,1);
 $lightCyanTransparent: rgba(110, 179, 189,.2);
 $lightCyanSolid: rgba(110, 179, 189,1);
 $deepTransparent: rgba(39, 45, 75,0);
@@ -175,7 +175,7 @@ $h1Font: calc(1rem + 1.1vw);
 $h2Font: calc(1rem + .5vw);
 $h3Font: calc(1rem + .4vw);
 $h4Font: calc(1rem + .3vw);
-$pFont: calc(1rem + .1vw);
+$pFont: calc(1rem + .01vw);
 $iconsDecoration: calc(5rem + .1vw);
 $tagFont: .8rem;
 $iFont: 40px;
@@ -183,7 +183,7 @@ $iFont: 40px;
 /*GLOBAL VARIABLES & MIXINS---------------- * * * */
 
 
-$bradius: 2rem;
+$bradius: 1rem;
 $minPadding: 1rem;
 $padding2: 2rem;
 $padding3: 3rem;
@@ -217,7 +217,6 @@ body{
 
 figure img{
     width: 100%;
-    border-radius: $padding2 $padding2 0 0;
 
 }
 
@@ -429,17 +428,21 @@ article{
 
     background-color: $cream;
     border-radius: $bradius;
-    width: 31.5%;
-    min-height: 70vh;
     overflow: hidden;
+    width: 31.5%;
     margin: 0 $minPadding $minPadding 0;
     @include shadow();
-    @include flex--start__start();
+    @include flex--start();
 
+    .imgArticle{
+        width: 100%;
+        height: 30%;
+    }
 
     .infoArticle{
+
         margin-top: 0;
-        //width: 70%;
+        width: 100%;
         padding: $padding2;
 
         h2{
@@ -513,7 +516,7 @@ article{
 .bucket{
     width: 100%;
     height: 100%;
-    background-image: url(../img/bg-dark-opac-25.svg);
+    background-image: url(../img/bg/bg-paint-dark.svg);
     background-attachment: fixed;
     background-repeat: repeat-y;
     background-size: contain;
@@ -521,16 +524,29 @@ article{
 }
 
 .bucket--cyan{
-    background-image: url(../img/bg-cyan__trans__opac-25.svg);
+    background-image: url(../img/bg/bg-cyan-opac-25.svg);
+
+    h3{
+        color: $light-cyan;
+    }
+    .sideBlock{
+        border-color: $light-cyan;
+    }
+    .tag{
+        background-color: $peach;
+        color: $deep;
+    }
 }
 .bucket--peach{
-    background-image: url(../img/bg-peach-opac-25.svg);
+    background-image: url(../img/bg/bg-peach-opac-50.svg);
 }
 .bucket--success{
-    background-image: url(../img/bg-success-opac-50.svg);
+    background-image: url(../img/bg/bg-success-opac-50.svg);
+
+    h3{
+        color: $light-cyan;
+    }
 }
-
-
 
 /*HEADER---------------- * * * */
 
@@ -704,16 +720,21 @@ padding-bottom: 0;
         width: 100%;
         height: 100%;
     }
-    figure{
+    
+    .cardImg{
+        height: 60vh;
+        max-height: 260px;
+    }
+    figure, .working{
         display: block;
         height: 100%;
-        height: 30vh;
-        max-height: 200px;
-        overflow: hidden;
         width: 100%;
+        overflow: hidden;
         background-color: $lightCyanTransparent;
 
     }
+
+
     .factory{
         position: absolute;
         bottom: 5%;
